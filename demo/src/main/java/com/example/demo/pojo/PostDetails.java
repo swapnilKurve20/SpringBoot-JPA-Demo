@@ -54,6 +54,12 @@ public class PostDetails {
 			super();
 		}
 
+		public TagsDetails(Long id, String name) {
+			super();
+			this.id = id;
+			this.name = name;
+		}
+
 		public Long getId() {
 			return id;
 		}

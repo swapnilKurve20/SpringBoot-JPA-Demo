@@ -6,4 +6,5 @@ import com.example.demo.model.Tags;
 
 public interface ITagsRepo extends JpaRepository<Tags, Long> {
 
+	Tags getTagByName(String name);
 }

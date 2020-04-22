@@ -19,6 +19,7 @@ import com.example.demo.model.UserProfiles;
 import com.example.demo.pojo.PostDetails;
 import com.example.demo.pojo.PostDetails.TagsDetails;
 import com.example.demo.repo.IPostRepo;
+import com.example.demo.repo.ITagsRepo;
 import com.example.demo.repo.IUserProfiles;
 
 @RestController
@@ -27,48 +28,56 @@ public class PostController {
 
 	@Autowired
 	IUserProfiles userProfileRepo;
-	
+
 	@Autowired
 	IPostRepo postRepo;
 	
-	
+	@Autowired
+	ITagsRepo tagRepo;
+
 	@PostMapping("/{userProfileId}")
-	public String addPost(@PathVariable(value = "userProfileId") String id, @RequestBody PostDetails post) throws Exception {
-		
+	public String addPost(@PathVariable(value = "userProfileId") String id, @RequestBody PostDetails post)
+			throws Exception {
+
 		Optional<UserProfiles> optional = userProfileRepo.findById(Long.parseLong(id));
-		
+
 		UserProfiles up = optional.get();
 		Posts p = null;
-		if(up.getId() != null) {
+		if (up.getId() != null) {
 			p = new Posts(post.getTitle(), post.getDescription());
 			p.setUserProfile(up);
 
 			Set<Tags> tags = new HashSet<>();
-			for(TagsDetails s : post.getTags()) {
-				Tags tag = new Tags();
-				tag.setId(s.getId());
-				tag.setName(s.getName());
-				
-				tag.getPosts().add(p);
-				tags.add(tag);
-			}
-//			p.setTags(tags);
-			p.getTags().addAll(tags);
 			
+			for (TagsDetails s : post.getTags()) {
+				Tags tag = tagRepo.getTagByName(s.getName());
+				if (tag == null) {
+					tag = new Tags();
+					tag.setId(s.getId());
+					tag.setName(s.getName());
+
+					tag.getPosts().add(p);
+					tags.add(tag);
+				} else {
+					tag = tagRepo.getOne(tag.getId());
+					tag.getPosts().add(p);
+					tags.add(tag);
+				}
+			}
+			p.getTags().addAll(tags);
+
 			p = postRepo.save(p);
 		}
-		
-		if(p == null)
+
+		if (p == null)
 			throw new Exception("Invalid post");
 		else
 			return String.valueOf(p.getId());
 	}
-	
-	
+
 	@GetMapping("/getAllPosts")
-	public List<Posts> getAllPosts(){
+	public List<Posts> getAllPosts() {
 		return postRepo.findAll();
 	}
-	
-	
+
 }
