@@ -1,5 +1,7 @@
 package com.example.demo.dao;
 
-public interface UserProfileDao {
+import com.example.demo.model.UserProfiles;
 
+public interface UserProfileDao {
+	public UserProfiles getUserProfile(Long userId);
 }

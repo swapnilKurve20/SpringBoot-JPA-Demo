@@ -16,8 +16,6 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	UserDao userDao;
 	
-//	ModelMapper modelMapper=new ModelMapper();
-	
 	public Long saveUser(UserRequestDto userRequestDto) {
 		
 		Long userId = null;
@@ -42,7 +40,7 @@ public class UserServiceImpl implements UserService {
 	}
 	
 	public UserResponseDto getUser(Long userId) {
-		// Model mapper - entiry to Response DTO
+	
 		ModelMapper modelMapper=new ModelMapper();
 		UserResponseDto userResponseDto=null;
 		try {
