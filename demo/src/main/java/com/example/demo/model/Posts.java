@@ -25,14 +25,14 @@ public class Posts {
 
 	private String description;
 
-	/*
-	 * @ManyToOne(fetch = FetchType.LAZY, optional = false)
-	 * 
-	 * @JoinColumn(name = "user_profile_id", nullable = false)
-	 */
-	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="user_id")
-	private UserProfiles userProfile;
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@JoinColumn(name = "user_profile_id", nullable = false)
+	private UserProfiles author;
+
+	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinTable(name = "liked_by", joinColumns = { @JoinColumn(name = "post_id") }, inverseJoinColumns = {
+			@JoinColumn(name = "user_profile_id") })
+	private Set<UserProfiles> likedBy;
 
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinTable(name = "post_tags", joinColumns = { @JoinColumn(name = "post_id") }, inverseJoinColumns = {
@@ -81,11 +81,20 @@ public class Posts {
 		this.tags = tags;
 	}
 
-	public UserProfiles getUserProfile() {
-		return userProfile;
+	public UserProfiles getAuthor() {
+		return author;
 	}
 
-	public void setUserProfile(UserProfiles userProfile) {
-		this.userProfile = userProfile;
+	public void setAuthor(UserProfiles author) {
+		this.author = author;
 	}
+
+	public Set<UserProfiles> getLikedBy() {
+		return likedBy;
+	}
+
+	public void setLikedBy(Set<UserProfiles> likedBy) {
+		this.likedBy = likedBy;
+	}
+
 }

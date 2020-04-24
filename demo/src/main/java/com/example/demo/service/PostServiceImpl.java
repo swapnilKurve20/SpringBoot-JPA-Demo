@@ -22,7 +22,7 @@ public class PostServiceImpl extends BaseService implements PostService {
 		Posts p = null;
 		if (up.getId() != null) {
 			p = new Posts(post.getTitle(), post.getDescription());
-			p.setUserProfile(up);
+			p.setAuthor(up);
 
 			Set<Tags> tags = new HashSet<>();
 

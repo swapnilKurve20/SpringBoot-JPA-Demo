@@ -11,6 +11,6 @@ import com.example.demo.model.Posts;
 @Repository
 public interface IPostRepo extends JpaRepository<Posts, Long> {
 
-	@Query("FROM Posts p where p.userProfile.id = :userProfile")
+	@Query("FROM Posts p where p.author.id = :userProfile")
 	List<Posts> findByUserProfile(Long userProfile);
 }

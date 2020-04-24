@@ -28,13 +28,13 @@ import com.example.demo.repo.IUserProfiles;
 @RequestMapping("/post")
 public class PostController extends BaseController {
 
-	//@Autowired
+	// @Autowired
 	IUserProfiles userProfileRepo;
 
-	//@Autowired
+	// @Autowired
 	IPostRepo postRepo;
 
-	//@Autowired
+	// @Autowired
 	ITagsRepo tagRepo;
 
 	@PostMapping("/{userProfileId}")
@@ -73,7 +73,7 @@ public class PostController extends BaseController {
 			@RequestParam(value = "postId") String id) {
 
 		Optional<Posts> posts = postRepo.findById(Long.parseLong(id));
-		if (posts.isPresent() && (posts.get().getUserProfile().getId() == Long.parseLong(userProfileId))) {
+		if (posts.isPresent() && (posts.get().getAuthor().getId() == Long.parseLong(userProfileId))) {
 			postRepo.deleteById(Long.parseLong(id));
 		}
 

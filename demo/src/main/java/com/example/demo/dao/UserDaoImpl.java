@@ -4,15 +4,9 @@ import java.io.Serializable;
 
 import javax.transaction.Transactional;
 
-import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.dto.UserDto;
-import com.example.demo.dto.UserRequestDto;
-import com.example.demo.dto.UserResponseDto;
 import com.example.demo.model.User;
-import com.example.demo.model.UserProfiles;
 
 @Repository
 @Transactional

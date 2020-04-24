@@ -15,7 +15,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="userprofiles")
+@Table(name = "userprofiles")
 public class UserProfiles {
 
 	@Id
@@ -29,9 +29,9 @@ public class UserProfiles {
 	@OneToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "user_id", nullable = false)
 	private User user;
-	
-	@OneToMany(mappedBy="userProfile", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	List<Posts> posts=new ArrayList<Posts>();
+
+	@OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	List<Posts> posts = new ArrayList<Posts>();
 
 	public UserProfiles() {
 		super();
