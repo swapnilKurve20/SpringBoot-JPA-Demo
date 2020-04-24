@@ -29,13 +29,13 @@ import com.example.demo.repo.IUserProfiles;
 @RequestMapping("/post")
 public class PostController {
 
-	@Autowired
+	//@Autowired
 	IUserProfiles userProfileRepo;
 
-	@Autowired
+	//@Autowired
 	IPostRepo postRepo;
 
-	@Autowired
+	//@Autowired
 	ITagsRepo tagRepo;
 
 	@PostMapping("/{userProfileId}")

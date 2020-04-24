@@ -16,7 +16,7 @@ import com.example.demo.repo.ITagsRepo;
 @RequestMapping("/tags")
 public class TagsController {
 
-	@Autowired
+	//@Autowired
 	private ITagsRepo tagsRepo;
 	
 	

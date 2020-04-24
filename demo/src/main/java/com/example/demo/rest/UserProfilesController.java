@@ -14,7 +14,7 @@ import com.example.demo.repo.IUserProfiles;
 @RequestMapping("/userProfiles")
 public class UserProfilesController {
 
-	@Autowired
+	//@Autowired
 	private IUserProfiles userProfiles;
 
 	@GetMapping("/getUserProfileByUserId")
