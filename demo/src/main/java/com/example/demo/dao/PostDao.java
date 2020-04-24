@@ -1,5 +1,7 @@
 package com.example.demo.dao;
 
-public interface PostDao {
+import com.example.demo.model.Posts;
 
+public interface PostDao {
+	public Posts addPost(Posts post);
 }

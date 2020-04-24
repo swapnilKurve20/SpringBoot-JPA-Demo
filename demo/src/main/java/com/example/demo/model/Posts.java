@@ -25,8 +25,13 @@ public class Posts {
 
 	private String description;
 
-	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-	@JoinColumn(name = "user_profile_id", nullable = false)
+	/*
+	 * @ManyToOne(fetch = FetchType.LAZY, optional = false)
+	 * 
+	 * @JoinColumn(name = "user_profile_id", nullable = false)
+	 */
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="user_id")
 	private UserProfiles userProfile;
 
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -83,7 +88,4 @@ public class Posts {
 	public void setUserProfile(UserProfiles userProfile) {
 		this.userProfile = userProfile;
 	}
-	
-	
-
 }

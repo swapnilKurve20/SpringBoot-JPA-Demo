@@ -1,14 +1,21 @@
 package com.example.demo.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="userprofiles")
 public class UserProfiles {
 
 	@Id
@@ -22,6 +29,9 @@ public class UserProfiles {
 	@OneToOne(fetch = FetchType.LAZY, optional = false)
 	@JoinColumn(name = "user_id", nullable = false)
 	private User user;
+	
+	@OneToMany(mappedBy="userProfile", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+	List<Posts> posts=new ArrayList<Posts>();
 
 	public UserProfiles() {
 		super();
@@ -65,4 +75,11 @@ public class UserProfiles {
 		this.user = user;
 	}
 
+	public List<Posts> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(List<Posts> posts) {
+		this.posts = posts;
+	}
 }
