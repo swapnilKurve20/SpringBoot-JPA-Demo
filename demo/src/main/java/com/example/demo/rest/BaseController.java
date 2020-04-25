@@ -6,19 +6,31 @@ import org.springframework.stereotype.Component;
 import com.example.demo.service.PostService;
 import com.example.demo.service.TagService;
 import com.example.demo.service.UserProfileService;
+import com.example.demo.service.UserService;
 
 @Component
 public class BaseController {
 
 	@Autowired
-	UserProfileService userProfileService;
+	private UserProfileService userProfileService;
 
 	@Autowired
-	PostService postService;
+	private PostService postService;
 	
 	@Autowired
-	TagService tagService;
+	private TagService tagService;
 	
+	@Autowired
+	private UserService userService;
+	
+	public UserService getUserService() {
+		return userService;
+	}
+
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
+
 	public UserProfileService getUserProfileService() {
 		return userProfileService;
 	}
