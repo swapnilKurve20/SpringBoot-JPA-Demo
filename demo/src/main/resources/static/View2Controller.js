@@ -14,7 +14,7 @@ var view2Controller = function($scope,$rootScope, View2Service) {
 	//$scope.getData();
 	
 	$scope.getUserDetails = function() {
-		debugger;
+		/*debugger;*/
 		$scope.firstName = $rootScope.loggedInUser.firstName;
 		$scope.lastName =  $rootScope.loggedInUser.lastName;
 	}

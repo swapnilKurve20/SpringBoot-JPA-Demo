@@ -18,6 +18,11 @@ appName.config(function($stateProvider,$locationProvider) {//,$urlProvider
 		templateUrl: 'view3.html',
 		controller : 'View3Controller'
 	})
+	.state("signup", {
+		url:'/signup',
+		templateUrl: 'signup.html',
+		controller : 'SignUpController'
+	})
 	
 	//$urlProvider.otherwise("/");
 

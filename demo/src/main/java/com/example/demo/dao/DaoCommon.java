@@ -6,5 +6,5 @@ public interface DaoCommon {
 	static final String driverClassName = "org.postgresql.Driver";
 	static final String url = "jdbc:postgresql://localhost/postgres";
     static final String username = "postgres";
-    static final String password = "postgres";
+    static final String password = "root";
 }

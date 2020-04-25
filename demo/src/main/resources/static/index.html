@@ -10,6 +10,16 @@
 		<script src="View3Controller.js"></script>						
 		<script src="service/View1Servic.js"></script>
 		<script src="service/View2Service.js"></script>
+		<script src="SignUpController.js"></script>
+		<script src="service/SignUpService.js"></script>
+		
+		<style>
+		label {
+    	display: inline-block;
+   		margin-bottom: .5rem;
+   		margin-right: 2.1rem;
+		}
+		</style>
 		
 	</head>
 	<body ng-app="appName">
@@ -26,6 +36,9 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item mr-1">
                         <a class="btn btn-primary" ui-sref="view1">Create User</a>
+                    </li>
+                    <li class="nav-item mr-1">
+                        <a class="btn btn-primary" ui-sref="signup">Sign Up</a>
                     </li>
                     <li class="nav-item mr-1">
                         <a class="btn btn-primary" ui-sref="view2">Add Profiles</a>
