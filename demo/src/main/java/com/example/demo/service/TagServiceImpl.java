@@ -6,7 +6,6 @@ import java.util.List;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dto.PostRequestDto.TagsDetails;
 import com.example.demo.dto.TagResponseDto;
 import com.example.demo.model.Tags;
 
