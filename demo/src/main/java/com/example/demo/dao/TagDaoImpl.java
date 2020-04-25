@@ -25,11 +25,15 @@ public class TagDaoImpl extends BaseDao implements TagDao {
 	@SuppressWarnings("deprecation")
 	public Tags getTagByName(String tagname) {
 		
+		Tags tag= null;
 		String getTagSql = "Select * from tags where name='"+tagname+"'";
-		
-		SQLQuery<Tags> queryObj = getSession().createSQLQuery(getTagSql);
-		List<Tags> tagList = queryObj.list();
-		Tags tag= tagList.size() ==1 ? tagList.get(0) : null;
+		try {
+			SQLQuery<Tags> queryObj = getSession().createSQLQuery(getTagSql);
+			List<Tags> tagList = queryObj.list();
+			tag= tagList.size() == 1 ? tagList.get(0) : null;	
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 		return tag;
 	}
 	
@@ -38,16 +42,21 @@ public class TagDaoImpl extends BaseDao implements TagDao {
 		
 		String getTagSql = "Select * from tags";
 		List<Tags> tags= new ArrayList<>();
-		SQLQuery queryObj = getSession().createSQLQuery(getTagSql);
-		List<Object[]> tagList = queryObj.getResultList();
-		
-		Iterator it = tagList.iterator();
-		while(it.hasNext()){
-		     Object[] line = (Object[]) it.next();
-		     Tags tag = new Tags();
-		     tag.setId(((BigInteger) line[0]).longValue());
-		     tag.setName(line[1].toString());
-		     tags.add(tag);
+		try {
+			SQLQuery queryObj = getSession().createSQLQuery(getTagSql);
+			List<Object[]> tagList = queryObj.getResultList();
+			
+			Iterator it = tagList.iterator();
+			while(it.hasNext()){
+			     Object[] line = (Object[]) it.next();
+			     Tags tag = new Tags();
+			     tag.setId(((BigInteger) line[0]).longValue());
+			     tag.setName(line[1].toString());
+			     tags.add(tag);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		return tags;
 	}

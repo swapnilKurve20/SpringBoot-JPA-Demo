@@ -55,15 +55,19 @@ public class PostController extends BaseController {
 
 	@GetMapping("/{userProfileId}/getAllPosts")
 	public List<PostDetails> getAllPosts(@PathVariable(value = "userProfileId") String id) {
-		
 		List<PostDetails> posts = new ArrayList<>();
 		Set<TagsDetails> tags = new HashSet<>();
-		for (Posts p : postRepo.findByUserProfile(Long.parseLong(id))) {
-			tags.clear();
-			for (Tags t : p.getTags()) {
-				tags.add(new TagsDetails(t.getId(), t.getName()));
-			}
-			posts.add(new PostDetails(p.getTitle(), p.getDescription(), tags));
+		
+		try {
+			for (Posts p : postRepo.findByUserProfile(Long.parseLong(id))) {
+				tags.clear();
+				for (Tags t : p.getTags()) {
+					tags.add(new TagsDetails(t.getId(), t.getName()));
+				}
+				posts.add(new PostDetails(p.getTitle(), p.getDescription(), tags));
+			}	
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		return posts;
 	}
@@ -71,12 +75,13 @@ public class PostController extends BaseController {
 	@DeleteMapping("/{userProfileId}/removePostById")
 	public void removePostById(@PathVariable(value = "userProfileId") String userProfileId,
 			@RequestParam(value = "postId") String id) {
-
-		Optional<Posts> posts = postRepo.findById(Long.parseLong(id));
-		if (posts.isPresent() && (posts.get().getAuthor().getId() == Long.parseLong(userProfileId))) {
-			postRepo.deleteById(Long.parseLong(id));
+		try {
+			Optional<Posts> posts = postRepo.findById(Long.parseLong(id));
+			if (posts.isPresent() && (posts.get().getAuthor().getId() == Long.parseLong(userProfileId))) {
+				postRepo.deleteById(Long.parseLong(id));
+			}	
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-
 	}
-
 }

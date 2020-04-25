@@ -14,10 +14,14 @@ public class UserProfilesController extends BaseController {
 	@GetMapping("/getUserProfileByUserId")
 	public UserProfileResponseDto getUserProfile(@RequestParam(value = "userId") String userId) throws Exception {
 		UserProfileResponseDto profile = null;
-		if (userId == null)
-			throw new Exception("User Id should not be null");
-		else {
-			profile =	getUserProfileService().getUserProfile(Long.parseLong(userId));
+		try {
+			if (userId == null)
+				throw new Exception("User Id should not be null");
+			else {
+				profile =	getUserProfileService().getUserProfile(Long.parseLong(userId));
+			}	
+		}catch (Exception e) {
+			e.printStackTrace();
 		}
 		return profile;
 	}
