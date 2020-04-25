@@ -16,38 +16,41 @@ import com.example.demo.model.UserProfiles;
 public class PostServiceImpl extends BaseService implements PostService {
 
 	public Posts addPost(Long id, PostRequestDto post) {
-		
-		UserProfiles up = getUserProfileDao().getUserProfile(id);
 
 		Posts p = null;
-		if (up.getId() != null) {
-			p = new Posts(post.getTitle(), post.getDescription());
-			p.setAuthor(up);
+		try {
+			UserProfiles up = getUserProfileDao().getUserProfile(id);
 
-			Set<Tags> tags = new HashSet<>();
+			if (up.getId() != null) {
+				p = new Posts(post.getTitle(), post.getDescription());
+				p.setAuthor(up);
 
-			for (TagsDetails s : post.getTags()) {
-				Tags tag = tagDao.getTagByName(s.getName());
-				if (tag == null) {
-					tag = new Tags();
-					//tag.setId(s.getId());
-					tag.setName(s.getName());
-					tag.getPosts().add(p);
-					tags.add(tag);
-				} else {
-					tag = tagDao.getTag(tag.getId());
-					tag.getPosts().add(p);
-					tags.add(tag);
+				Set<Tags> tags = new HashSet<>();
+
+				for (TagsDetails s : post.getTags()) {
+					Tags tag = tagDao.getTagByName(s.getName());
+					if (tag == null) {
+						tag = new Tags();
+						//tag.setId(s.getId());
+						tag.setName(s.getName());
+						tag.getPosts().add(p);
+						tags.add(tag);
+					} else {
+						tag = tagDao.getTag(tag.getId());
+						tag.getPosts().add(p);
+						tags.add(tag);
+					}
 				}
+				p.getTags().addAll(tags);
+				p = getPostDao().addPost(p);
+				 if (p == null) 
+					  throw new Exception("Invalid post");
 			}
-			p.getTags().addAll(tags);
 
-			p = getPostDao().addPost(p);
+		}catch (Exception e) {
+			e.printStackTrace();
 		}
-
-		/*
-		 * if (p == null) throw new Exception("Invalid post"); else
-		 */
-			return p;
+		
+		return p;
 	}
 }

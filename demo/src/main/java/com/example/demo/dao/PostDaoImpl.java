@@ -13,7 +13,13 @@ import com.example.demo.model.Posts;
 public class PostDaoImpl extends BaseDao implements PostDao {
 	
 	public Posts addPost(Posts post) {
-		Serializable id = getSession().save(post);
-		return (Posts) getSession().get(Posts.class, id);
+		Posts savedPost=null;
+		try {
+			Serializable id = getSession().save(post);
+			savedPost = (Posts) getSession().get(Posts.class, id);	
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return savedPost; 
 	}
 }

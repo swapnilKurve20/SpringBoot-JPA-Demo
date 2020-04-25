@@ -16,8 +16,15 @@ public class TagServiceImpl extends BaseService implements TagService {
 	ModelMapper mapper = new ModelMapper();
 
 	public TagResponseDto getTag(Long tagId) {
-		return null;
-		// return getTagDao().getTag(tagId);
+		TagResponseDto tagResponseDto=new TagResponseDto();
+		try {
+			Tags tag = getTagDao().getTag(tagId);
+			tagResponseDto.setId(tag.getId());
+			tagResponseDto.setName(tag.getName());	
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return tagResponseDto;
 	}
 
 	public List<TagResponseDto> getAllTags() {
