@@ -1,6 +1,8 @@
 package com.example.demo.service;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.PostDao;
@@ -12,13 +14,15 @@ public class BaseService {
 
 	@Autowired
 	protected UserProfileDao userProfileDao;
-	
-	@Autowired
-	PostDao postDao;
 
 	@Autowired
-	TagDao tagDao;
-	
+	private PostDao postDao;
+
+	@Autowired
+	private TagDao tagDao;
+
+	private ModelMapper modelMapper;
+
 	public UserProfileDao getUserProfileDao() {
 		return userProfileDao;
 	}
@@ -42,5 +46,11 @@ public class BaseService {
 	public void setTagDao(TagDao tagDao) {
 		this.tagDao = tagDao;
 	}
-	
+
+	public ModelMapper getModelMapper() {
+		if (modelMapper == null)
+			modelMapper = new ModelMapper();
+		return modelMapper;
+	}
+
 }

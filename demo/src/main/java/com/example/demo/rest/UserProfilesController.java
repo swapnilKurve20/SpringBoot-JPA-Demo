@@ -11,16 +11,16 @@ import com.example.demo.dto.UserProfileResponseDto;
 @RequestMapping("/userProfiles")
 public class UserProfilesController extends BaseController {
 
-	@GetMapping("/getUserProfileByUserId")
+	@GetMapping
 	public UserProfileResponseDto getUserProfile(@RequestParam(value = "userId") String userId) throws Exception {
 		UserProfileResponseDto profile = null;
 		try {
 			if (userId == null)
 				throw new Exception("User Id should not be null");
 			else {
-				profile =	getUserProfileService().getUserProfile(Long.parseLong(userId));
-			}	
-		}catch (Exception e) {
+				profile = getUserProfileService().getUserProfile(Long.parseLong(userId));
+			}
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return profile;

@@ -4,9 +4,13 @@ import java.util.Set;
 
 public class PostRequestDto {
 
+	private String id;
+
 	private String title;
 
 	private String description;
+
+	private Set<UserProfilesDto> likedBy;
 
 	private Set<TagsDetails> tags;
 
@@ -19,6 +23,14 @@ public class PostRequestDto {
 		this.title = title;
 		this.description = description;
 		this.tags = tags;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getTitle() {
@@ -35,6 +47,14 @@ public class PostRequestDto {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Set<UserProfilesDto> getLikedBy() {
+		return likedBy;
+	}
+
+	public void setLikedBy(Set<UserProfilesDto> likedBy) {
+		this.likedBy = likedBy;
 	}
 
 	public Set<TagsDetails> getTags() {

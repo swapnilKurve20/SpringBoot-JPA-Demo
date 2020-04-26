@@ -1,21 +1,15 @@
 package com.example.demo.dto;
 
-import javax.validation.constraints.NotEmpty;
-
 public class UserRequestDto {
 
-	@NotEmpty(message = "first name must not be empty")
 	private String firstName;
 
 	private String lastName;
 
-	@NotEmpty(message = "email must not be empty")
 	private String email;
 
-	@NotEmpty(message = "password must not be empty")
 	private String password;
 
-	@NotEmpty(message = "Gender must not be empty")
 	private String gender;
 
 	private String address;
