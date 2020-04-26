@@ -5,30 +5,83 @@
 				<div class="card-body">
 					<h3>Sign Up & Subscribe</h3>
 					<p class="Capitalize">Please fill out the form for subscribe</p>
-					<form>
+					<form name="userForm" ng-submit="saveDetails(userForm);" novalidate>
 						<div class="form-group">
-							<input class="form-control form-control-md" type="text"
-								ng-model="user.firstName" placeholder="First Name" required>
+							<input class="form-control form-control-md" type="text" no-special-char ng-pattern="/^[a-zA-Z]*$/" name="firstName"
+								ng-model="user.firstName" placeholder="First Name" ng-required="true">
+								<div style="color:white"
+								ng-show="userForm.firstName.$error.required && userForm.firstName.$touched">
+								First name is required
+								</div>
+								<div style="color:white"
+								ng-show="userForm.$submitted && userForm.firstName.$untouched">
+								Enter First Name
+								</div>
+								<div style="color:white"
+								ng-show="userForm.firstName.$error.pattern && userForm.firstName.$invalid">
+								Enter valid name
+								</div>
 						</div>
 						<div class="form-group">
-							<input class="form-control form-control-md" type="text"
-								ng-model="user.lastName" placeholder="Last Name">
+							<input class="form-control form-control-md" type="text" no-special-char ng-pattern="/^[a-zA-Z]*$/" name="lastName"
+								ng-model="user.lastName" placeholder="Last Name" ng-required="true">
+								<div style="color:white"
+								ng-show="userForm.lastName.$error.required && userForm.lastName.$touched">
+								Last name is required
+								</div>
+								<div style="color:white"
+								ng-show="userForm.$submitted && userForm.lastName.$untouched">
+								Enter Last Name
+								</div>
+								<div style="color:white"
+								ng-show="userForm.lastName.$error.pattern && userForm.lastName.$invalid">
+								Enter valid name
+								</div>
 						</div>
 						<div class="form-group">
-							<input class="form-control form-control-md" type="email"
-								ng-model="user.email" placeholder="Email">
+							<input class="form-control form-control-md" type="email" name="email"
+								ng-model="user.email" placeholder="Email" ng-required="true">
+								<div style="color:white"
+								ng-show="userForm.email.$error.required && userForm.email.$touched">
+								Email is required
+								</div>
+								<div style="color:white"
+								ng-show="userForm.email.$error.email && userForm.email.$touched">
+								Email is not valid
+								</div>
+								<div style="color:white"
+								ng-show="userForm.$submitted && userForm.email.$untouched">
+								Enter Email
+								</div>
 						</div>
 						<div class="form-group">
-							<input class="form-control form-control-md" type="password"
-								ng-model="user.password" placeholder="Password">
+							<input class="form-control form-control-md" type="password" name="password"
+								ng-model="user.password" placeholder="Password" ng-required="true">
+								<div style="color:white"
+								ng-show="userForm.password.$error.required && userForm.password.$touched">
+								Password is required
+								</div>
+								<div style="color:white"
+								ng-show="userForm.$submitted && userForm.password.$untouched">
+								Enter Password
+								</div>
 						</div>
 						<div class="form-group">
 						<p class="form-control">
 						<label>Gender</label>
-							<input type="radio" ng-model="user.gender" value="male">
+							<input type="radio" ng-model="user.gender" value="male" name="gender" ng-required="true">
 								<label>Male</label>
-							<input type="radio" ng-model="user.gender" value="female">
+							<input type="radio" ng-model="user.gender" value="female" name="gender" ng-required="true">
 								<label>Female</label>
+								<div style="color:white"
+								ng-show="userForm.$submitted && userForm.gender.$untouched">
+								Enter gender
+								</div>
+								<!-- <div style="color:white"
+								ng-show="userForm.gender.$error.required && userForm.gender.$touched">
+								Gender is required
+								</div> -->
+								
 						</p>
 						</div>
 						<div class="form-group">
@@ -36,8 +89,8 @@
 								ng-model="user.address"
 								placeholder="Address">
 						</div>
-						<div class="form-group">
-							<input type="submit" ng-click="saveDetails()"
+						<div class="form-group">   <!-- ng-disabled="userForm.$invalid" -->
+							<input type="submit" 
 								class="btn btn-outline-light btn-block">
 						</div>
 					</form>

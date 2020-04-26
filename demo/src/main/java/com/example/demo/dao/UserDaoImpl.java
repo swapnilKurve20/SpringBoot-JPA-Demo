@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.model.User;
 
 @Repository
-@Transactional
+@Transactional 
 public class UserDaoImpl extends BaseDao implements UserDao {
 
 	@Override
