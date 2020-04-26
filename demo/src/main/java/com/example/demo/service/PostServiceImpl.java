@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.dto.PostRequestDto;
 import com.example.demo.dto.PostRequestDto.TagsDetails;
-import com.example.demo.dto.UserProfilesDto;
 import com.example.demo.exceptions.DataNotFoundException;
 import com.example.demo.model.Posts;
 import com.example.demo.model.Tags;
@@ -78,22 +77,25 @@ public class PostServiceImpl extends BaseService implements PostService {
 	}
 
 	@Override
-	public void updatePost(String userProfileId, PostRequestDto requestDto) {
-		
+	public void updatePost(String userProfileId, PostRequestDto requestDto) throws Exception {
+
 		Posts post = getPostDao().findById(Long.valueOf(requestDto.getId()));
-		if(post == null)
-			throw new DataNotFoundException("Post not found for id "+requestDto.getId());
-		
-		Set<UserProfiles> profiles = new HashSet<>();
-		for(UserProfilesDto up : requestDto.getLikedBy()) {
-			profiles.add(new UserProfiles(up.getGender(), up.getAddress()));
+		if (post == null)
+			throw new DataNotFoundException("Post not found for id " + requestDto.getId());
+		if (post.getAuthor().getId() == Long.valueOf(userProfileId)) {
+			UserProfiles profile = getUserProfileDao().getUserProfile(Long.valueOf(requestDto.getId()));
+			if (profile == null)
+				throw new DataNotFoundException("User profile not found for id " + requestDto.getId());
+
+			Set<UserProfiles> profiles = new HashSet<>();
+			profiles.add(profile);
+
+			post.setLikedBy(profiles);
+			post.setAuthor(getUserProfileDao().getUserProfile(Long.valueOf(userProfileId)));
+
+			getPostDao().updatePost(userProfileId, post);
+		}else {
+			throw new Exception("Invalid post");
 		}
-		
-		post.setLikedBy(profiles);
-		
-		getPostDao().updatePost(userProfileId, post);
-		
-		
-		
 	}
 }

@@ -63,8 +63,15 @@ public class PostDaoImpl extends BaseDao implements PostDao {
 		try {
 
 			NativeQuery<Posts> queryObj = getSession().createNativeQuery(getPostSql);
-			List<Posts> postList = queryObj.list();
-			post = postList.size() == 1 ? postList.get(0) : null;
+			List<Posts> postList = queryObj.getResultList();
+			Iterator it = postList.iterator();
+			while (it.hasNext()) {
+				Object[] line = (Object[]) it.next();
+				post = new Posts();
+				post.setId(((BigInteger) line[0]).longValue());
+				post.setDescription(String.valueOf(line[1]));
+				post.setTitle(String.valueOf(line[2]));
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

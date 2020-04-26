@@ -13,5 +13,5 @@ public interface PostService {
 	
 	void deleteById(String userProfileId, String postId);
 	
-	void updatePost(String userProfileId, PostRequestDto requestDto);
+	void updatePost(String userProfileId, PostRequestDto requestDto) throws Exception;
 }

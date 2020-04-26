@@ -45,7 +45,7 @@ public class PostController extends BaseController {
 		return new ResponseEntity<Object>(HttpStatus.OK);
 	}
 
-	@PutMapping("/userProfileId")
+	@PutMapping("/{userProfileId}")
 	public ResponseEntity<Object> updatePost(@PathVariable(value = "userProfileId") String userProfileId,
 			@RequestBody PostRequestDto post) {
 
