@@ -2,12 +2,13 @@ package com.example.demo.service;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.PostDao;
 import com.example.demo.dao.TagDao;
+import com.example.demo.dao.UserDao;
 import com.example.demo.dao.UserProfileDao;
+import com.example.demo.exceptions.CustomExceptionHandler;
 
 @Service
 public class BaseService {
@@ -20,7 +21,13 @@ public class BaseService {
 
 	@Autowired
 	private TagDao tagDao;
+	
+	@Autowired
+	private UserDao userDao;
 
+	@Autowired
+	private CustomExceptionHandler customExceptionHandler;
+	
 	private ModelMapper modelMapper;
 
 	public UserProfileDao getUserProfileDao() {
@@ -45,6 +52,19 @@ public class BaseService {
 
 	public void setTagDao(TagDao tagDao) {
 		this.tagDao = tagDao;
+	}
+
+	
+	public UserDao getUserDao() {
+		return userDao;
+	}
+
+	public void setUserDao(UserDao userDao) {
+		this.userDao = userDao;
+	}
+
+	public CustomExceptionHandler getCustomExceptionHandler() {
+		return customExceptionHandler;
 	}
 
 	public ModelMapper getModelMapper() {
