@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dto.UserRequestDto;
 import com.example.demo.dto.UserResponseDto;
+import com.example.demo.exceptions.CustomExceptionHandler;
 import com.example.demo.exceptions.DataNotFoundException;
 
 @RestController
@@ -17,19 +18,26 @@ public class UsersController extends BaseController{
 
 	@PostMapping(path = "/addUser", consumes = "application/json", produces = "application/json")
 	public Long saveUser(@RequestBody UserRequestDto user) {
-
-		Long userId = getUserService().saveUser(user);
-
+		Long userId=null;
+		try {
+			userId = getUserService().saveUser(user);	
+		} catch (Exception e) {
+			getCustomExceptionHandler().logExcepton(e);
+		}
 		return userId;
 	}
 
 	@GetMapping("/getUserById")
 	public UserResponseDto getUser(@RequestParam(value = "id") String id) throws Exception {
 		UserResponseDto userResponseDto = null;
-		userResponseDto = getUserService().getUser(Long.parseLong(id));
-		if (userResponseDto == null)
-			throw new DataNotFoundException("No data found for id " + id);
-
+		
+		try {
+			userResponseDto = getUserService().getUser(Long.parseLong(id));
+			if (userResponseDto == null)
+				throw new DataNotFoundException("No data found for id " + id);	
+		} catch (Exception e) {
+			getCustomExceptionHandler().logExcepton(e);
+		}
 		return userResponseDto;
 	}
 }

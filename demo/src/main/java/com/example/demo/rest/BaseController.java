@@ -3,6 +3,7 @@ package com.example.demo.rest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.example.demo.exceptions.CustomExceptionHandler;
 import com.example.demo.service.PostService;
 import com.example.demo.service.TagService;
 import com.example.demo.service.UserProfileService;
@@ -22,6 +23,9 @@ public class BaseController {
 	
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	CustomExceptionHandler customExceptionHandler;
 	
 	public UserService getUserService() {
 		return userService;
@@ -54,5 +58,12 @@ public class BaseController {
 	public void setTagService(TagService tagService) {
 		this.tagService = tagService;
 	}
-	
+
+	public CustomExceptionHandler getCustomExceptionHandler() {
+		return customExceptionHandler;
+	}
+
+	public void setCustomExceptionHandler(CustomExceptionHandler customExceptionHandler) {
+		this.customExceptionHandler = customExceptionHandler;
+	}
 }

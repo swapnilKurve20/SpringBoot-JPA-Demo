@@ -1,8 +1,12 @@
 package com.example.demo.exceptions;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +21,9 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(CustomExceptionHandler.class);
+	StringWriter sw = new StringWriter();
+	
 	@ExceptionHandler(Exception.class)
 	public final ResponseEntity<Object> handleAllExceptions(Exception ex) {
 		ErrorResponse error = new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(), ex.getLocalizedMessage(),
@@ -43,5 +50,10 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
 				System.currentTimeMillis());
 		return new ResponseEntity(error, HttpStatus.BAD_REQUEST);
 	}
-
+	
+	public void logExcepton(Exception exception) {
+		exception.printStackTrace(new PrintWriter(sw));
+		String exceptionAsString = sw.toString();
+		LOGGER.error(exceptionAsString);
+	}
 }
