@@ -1,5 +1,7 @@
 package com.example.demo.rest;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,18 +19,26 @@ import com.example.demo.exceptions.DataNotFoundException;
 @RequestMapping("/users")
 public class UsersController extends BaseController {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(UsersController.class);
+
 	@PostMapping
 	public ResponseEntity<Object> saveUser(@RequestBody UserRequestDto user) {
-
-		Long userId = getUserService().saveUser(user);
-
+	
+		LOGGER.info("Controller : Started save user call.");
+		Long userId = null;
+		try {	
+			getUserService().saveUser(user);
+		} catch (Exception e) {
+			getCustomExceptionHandler().logExcepton(e);
+		}
+		LOGGER.info("Controller : Completed save user call for id = "+ userId);
 		return new ResponseEntity<Object>(userId, HttpStatus.OK);
 	}
 
 	@GetMapping
 	public UserResponseDto getUser(@RequestParam(value = "id") String id) throws Exception {
+		LOGGER.info("Controller : Started get user call.");
 		UserResponseDto userResponseDto = null;
-
 		try {
 			userResponseDto = getUserService().getUser(Long.parseLong(id));
 			if (userResponseDto == null)
@@ -36,6 +46,7 @@ public class UsersController extends BaseController {
 		} catch (Exception e) {
 			getCustomExceptionHandler().logExcepton(e);
 		}
+		LOGGER.info("Controller : Completed get user call returning results for id = "+ id);
 		return userResponseDto;
 	}
 }
