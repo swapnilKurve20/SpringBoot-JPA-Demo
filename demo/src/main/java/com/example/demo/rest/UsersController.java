@@ -27,7 +27,7 @@ public class UsersController extends BaseController {
 		LOGGER.info("Controller : Started save user call.");
 		Long userId = null;
 		try {	
-			getUserService().saveUser(user);
+			userId = getUserService().saveUser(user);
 		} catch (Exception e) {
 			getCustomExceptionHandler().logExcepton(e);
 		}
