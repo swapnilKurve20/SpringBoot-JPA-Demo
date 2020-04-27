@@ -24,16 +24,16 @@ import com.example.demo.model.Posts;
 public class PostController extends BaseController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(PostController.class);
-	
+
 	@PostMapping("/{userProfileId}")
 	public ResponseEntity<Object> addPost(@PathVariable(value = "userProfileId") String id,
 			@RequestBody PostRequestDto post) throws Exception {
 		LOGGER.info("Started add post call.");
-		
+
 		Posts posts = null;
 		try {
-			posts = getPostService().addPost(Long.parseLong(id), post);	
-		}catch (Exception e) {
+			posts = getPostService().addPost(Long.parseLong(id), post);
+		} catch (Exception e) {
 			getCustomExceptionHandler().logExcepton(e);
 		}
 		LOGGER.info("Completed add post call.");
@@ -62,7 +62,7 @@ public class PostController extends BaseController {
 		try {
 			getPostService().updatePost(userProfileId, post);
 		} catch (Exception e) {
-			e.printStackTrace();
+			getCustomExceptionHandler().logExcepton(e);
 		}
 		return new ResponseEntity<Object>(HttpStatus.OK);
 	}

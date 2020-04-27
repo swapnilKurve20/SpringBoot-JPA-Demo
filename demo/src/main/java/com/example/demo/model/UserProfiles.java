@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -31,7 +32,10 @@ public class UserProfiles {
 	private User user;
 
 	@OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	List<Posts> posts = new ArrayList<Posts>();
+	List<Posts> posts;
+
+	@ManyToMany(mappedBy = "likedBy", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	List<Posts> likedPost;
 
 	public UserProfiles() {
 		super();
@@ -76,10 +80,76 @@ public class UserProfiles {
 	}
 
 	public List<Posts> getPosts() {
+		if (posts == null)
+			posts = new ArrayList<>();
 		return posts;
 	}
 
 	public void setPosts(List<Posts> posts) {
 		this.posts = posts;
 	}
+
+	public List<Posts> getLikedPost() {
+		return likedPost;
+	}
+
+	public void setLikedPost(List<Posts> likedPost) {
+		this.likedPost = likedPost;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((address == null) ? 0 : address.hashCode());
+		result = prime * result + ((gender == null) ? 0 : gender.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((likedPost == null) ? 0 : likedPost.hashCode());
+		result = prime * result + ((posts == null) ? 0 : posts.hashCode());
+		result = prime * result + ((user == null) ? 0 : user.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		UserProfiles other = (UserProfiles) obj;
+		if (address == null) {
+			if (other.address != null)
+				return false;
+		} else if (!address.equals(other.address))
+			return false;
+		if (gender == null) {
+			if (other.gender != null)
+				return false;
+		} else if (!gender.equals(other.gender))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (likedPost == null) {
+			if (other.likedPost != null)
+				return false;
+		} else if (!likedPost.equals(other.likedPost))
+			return false;
+		if (posts == null) {
+			if (other.posts != null)
+				return false;
+		} else if (!posts.equals(other.posts))
+			return false;
+		if (user == null) {
+			if (other.user != null)
+				return false;
+		} else if (!user.equals(other.user))
+			return false;
+		return true;
+	}
+
 }

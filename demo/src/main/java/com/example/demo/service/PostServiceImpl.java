@@ -2,8 +2,12 @@ package com.example.demo.service;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+
+import javax.transaction.Transactional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,9 +19,9 @@ import com.example.demo.exceptions.DataNotFoundException;
 import com.example.demo.model.Posts;
 import com.example.demo.model.Tags;
 import com.example.demo.model.UserProfiles;
-import com.example.demo.rest.PostController;
 
 @Service
+@Transactional
 public class PostServiceImpl extends BaseService implements PostService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(PostServiceImpl.class);
@@ -63,12 +67,13 @@ public class PostServiceImpl extends BaseService implements PostService {
 	@Override
 	public List<PostRequestDto> getAllPostsByProfile(String profileId) {
 
-		List<Posts> posts = getPostDao().getAllPostsByProfile(profileId);
+		Map<String, Posts> posts = getPostDao().getAllPostsByProfile(profileId);
 		List<PostRequestDto> postDtos = new ArrayList<>();
 		if (posts == null)
 			throw new DataNotFoundException("Posts not found for Profile id " + profileId);
 		else {
-			for (Posts p : posts) {
+
+			for (Posts p : posts.values()) {
 				postDtos.add(getModelMapper().map(p, PostRequestDto.class));
 			}
 		}
@@ -85,21 +90,18 @@ public class PostServiceImpl extends BaseService implements PostService {
 	public void updatePost(String userProfileId, PostRequestDto requestDto) throws Exception {
 
 		Posts post = getPostDao().findById(Long.valueOf(requestDto.getId()));
+
 		if (post == null)
 			throw new DataNotFoundException("Post not found for id " + requestDto.getId());
+
 		if (post.getAuthor().getId() == Long.valueOf(userProfileId)) {
-			UserProfiles profile = getUserProfileDao().getUserProfile(Long.valueOf(requestDto.getId()));
+			UserProfiles profile = getUserProfileDao().getUserProfile(Long.valueOf(requestDto.getLikedBy().getId()));
 			if (profile == null)
 				throw new DataNotFoundException("User profile not found for id " + requestDto.getId());
 
-			Set<UserProfiles> profiles = new HashSet<>();
-			profiles.add(profile);
+			getPostDao().updatePost(requestDto.getLikedBy().getId(), post);
 
-			post.setLikedBy(profiles);
-			post.setAuthor(getUserProfileDao().getUserProfile(Long.valueOf(userProfileId)));
-
-			getPostDao().updatePost(userProfileId, post);
-		}else {
+		} else {
 			throw new Exception("Invalid post");
 		}
 	}

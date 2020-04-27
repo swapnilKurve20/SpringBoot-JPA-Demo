@@ -10,7 +10,7 @@ public class PostRequestDto {
 
 	private String description;
 
-	private Set<UserProfilesDto> likedBy;
+	private UserProfilesDto likedBy;
 
 	private Set<TagsDetails> tags;
 
@@ -49,11 +49,11 @@ public class PostRequestDto {
 		this.description = description;
 	}
 
-	public Set<UserProfilesDto> getLikedBy() {
+	public UserProfilesDto getLikedBy() {
 		return likedBy;
 	}
 
-	public void setLikedBy(Set<UserProfilesDto> likedBy) {
+	public void setLikedBy(UserProfilesDto likedBy) {
 		this.likedBy = likedBy;
 	}
 

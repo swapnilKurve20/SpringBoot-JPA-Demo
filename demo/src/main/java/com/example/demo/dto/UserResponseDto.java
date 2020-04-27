@@ -1,28 +1,39 @@
 package com.example.demo.dto;
 
+import java.util.List;
+
 public class UserResponseDto {
 
+	private String id;
 	private String firstName;
 	private String lastName;
 	private String email;
-	private String gender;
-	private String address;
+	private UserProfilesDto profilesDto;
+
+	private List<PostResponseDto> posts;
 
 	public UserResponseDto() {
 		super();
 	}
-	
-	public UserResponseDto(String firstName, String lastName, String email, String gender, String address) {
-		super();
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.email = email;
-		this.gender = gender;
-		this.address = address;
-	}
 
 	public String getFirstName() {
 		return firstName;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public UserProfilesDto getProfilesDto() {
+		return profilesDto;
+	}
+
+	public void setProfilesDto(UserProfilesDto profilesDto) {
+		this.profilesDto = profilesDto;
 	}
 
 	public void setFirstName(String firstName) {
@@ -45,19 +56,12 @@ public class UserResponseDto {
 		this.email = email;
 	}
 
-	public String getGender() {
-		return gender;
+	public List<PostResponseDto> getPosts() {
+		return posts;
 	}
 
-	public void setGender(String gender) {
-		this.gender = gender;
+	public void setPosts(List<PostResponseDto> posts) {
+		this.posts = posts;
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
 }

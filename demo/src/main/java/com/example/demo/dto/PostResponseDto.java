@@ -6,6 +6,8 @@ import com.example.demo.dto.PostRequestDto.TagsDetails;
 
 public class PostResponseDto {
 
+	private String id;
+
 	private String title;
 
 	private String description;
@@ -14,12 +16,24 @@ public class PostResponseDto {
 
 	private Set<TagsDetails> tags;
 
+	public PostResponseDto() {
+		super();
+	}
+
 	public PostResponseDto(String title, String description, Set<UserProfilesDto> likedBy, Set<TagsDetails> tags) {
 		super();
 		this.title = title;
 		this.description = description;
 		this.likedBy = likedBy;
 		this.tags = tags;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getTitle() {

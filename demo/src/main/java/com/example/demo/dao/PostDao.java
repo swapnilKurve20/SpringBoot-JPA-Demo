@@ -1,13 +1,13 @@
 package com.example.demo.dao;
 
-import java.util.List;
+import java.util.Map;
 
 import com.example.demo.model.Posts;
 
 public interface PostDao {
 	Posts addPost(Posts post);
 
-	List<Posts> getAllPostsByProfile(String id);
+	Map<String, Posts> getAllPostsByProfile(String id);
 
 	Posts findById(Long id);
 
