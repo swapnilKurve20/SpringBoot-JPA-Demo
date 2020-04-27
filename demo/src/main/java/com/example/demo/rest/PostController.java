@@ -34,23 +34,33 @@ public class PostController extends BaseController {
 		try {
 			posts = getPostService().addPost(Long.parseLong(id), post);
 		} catch (Exception e) {
-			getCustomExceptionHandler().logExcepton(e);
+			return new ResponseEntity<Object>("Something went wrong !", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		LOGGER.info("Completed add post call.");
 		return new ResponseEntity<>(posts.getId(), HttpStatus.OK);
 	}
 
 	@GetMapping("/{userProfileId}")
-	public List<PostRequestDto> getAllPosts(@PathVariable(value = "userProfileId") String id) {
+	public ResponseEntity<Object> getAllPosts(@PathVariable(value = "userProfileId") String id) {
 
-		return getPostService().getAllPostsByProfile(id);
+		List<PostRequestDto> posts = null;
+		try {
+			getPostService().getAllPostsByProfile(id);
+		} catch (Exception e) {
+			return new ResponseEntity<Object>("Something went wrong !", HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+		return new ResponseEntity<Object>(posts, HttpStatus.OK);
 	}
 
 	@DeleteMapping("/{userProfileId}")
 	public ResponseEntity<Object> removePostById(@PathVariable(value = "userProfileId") String userProfileId,
 			@RequestParam(value = "postId") String id) {
 
-		getPostService().deleteById(userProfileId, id);
+		try {
+			getPostService().deleteById(userProfileId, id);
+		} catch (Exception e) {
+			return new ResponseEntity<Object>("Something went wrong !", HttpStatus.INTERNAL_SERVER_ERROR);
+		}
 
 		return new ResponseEntity<Object>(HttpStatus.OK);
 	}
@@ -62,7 +72,7 @@ public class PostController extends BaseController {
 		try {
 			getPostService().updatePost(userProfileId, post);
 		} catch (Exception e) {
-			getCustomExceptionHandler().logExcepton(e);
+			return new ResponseEntity<Object>("Something went wrong !", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		return new ResponseEntity<Object>(HttpStatus.OK);
 	}

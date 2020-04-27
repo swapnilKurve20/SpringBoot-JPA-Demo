@@ -29,14 +29,14 @@ public class UsersController extends BaseController {
 		try {	
 			userId = getUserService().saveUser(user);
 		} catch (Exception e) {
-			getCustomExceptionHandler().logExcepton(e);
+			return new ResponseEntity<Object>("Something went wrong !", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		LOGGER.info("Controller : Completed save user call for id = "+ userId);
 		return new ResponseEntity<Object>(userId, HttpStatus.OK);
 	}
 
 	@GetMapping
-	public UserResponseDto getUser(@RequestParam(value = "id") String id) throws Exception {
+	public ResponseEntity<Object> getUser(@RequestParam(value = "id") String id) throws Exception {
 		LOGGER.info("Controller : Started get user call.");
 		UserResponseDto userResponseDto = null;
 		try {
@@ -44,9 +44,9 @@ public class UsersController extends BaseController {
 			if (userResponseDto == null)
 				throw new DataNotFoundException("No data found for id " + id);
 		} catch (Exception e) {
-			getCustomExceptionHandler().logExcepton(e);
+			return new ResponseEntity<Object>("Something went wrong !", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		LOGGER.info("Controller : Completed get user call returning results for id = "+ id);
-		return userResponseDto;
+		return new ResponseEntity<Object>(userResponseDto,HttpStatus.OK);
 	}
 }

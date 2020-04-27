@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,16 +19,16 @@ public class TagsController extends BaseController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(TagsController.class);
 	
 	@GetMapping
-	public List<TagResponseDto> getAllTags() {
+	public ResponseEntity<Object> getAllTags() {
 		LOGGER.info("Started get all tags call.");
 		List<TagResponseDto> tagList = null;
 		try {
 			tagList = getTagService().getAllTags();
 		} catch (Exception e) {
-			e.printStackTrace();
+			return new ResponseEntity<Object>("Something went wrong !", HttpStatus.INTERNAL_SERVER_ERROR);
 		}
 		LOGGER.info("Completed get all tags call.");
-		return tagList;
+		return new ResponseEntity<Object>(tagList, HttpStatus.OK);
 	}
 
 }
