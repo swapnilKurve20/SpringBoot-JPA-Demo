@@ -5,6 +5,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.dto.PostRequestDto;
@@ -13,12 +15,15 @@ import com.example.demo.exceptions.DataNotFoundException;
 import com.example.demo.model.Posts;
 import com.example.demo.model.Tags;
 import com.example.demo.model.UserProfiles;
+import com.example.demo.rest.PostController;
 
 @Service
 public class PostServiceImpl extends BaseService implements PostService {
 
-	public Posts addPost(Long id, PostRequestDto post) {
+	private static final Logger LOGGER = LoggerFactory.getLogger(PostServiceImpl.class);
 
+	public Posts addPost(Long id, PostRequestDto post) {
+		LOGGER.info("Started add post call.");
 		Posts p = null;
 		try {
 			UserProfiles up = getUserProfileDao().getUserProfile(id);
@@ -51,7 +56,7 @@ public class PostServiceImpl extends BaseService implements PostService {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
+		LOGGER.info("Completed add post call.");
 		return p;
 	}
 

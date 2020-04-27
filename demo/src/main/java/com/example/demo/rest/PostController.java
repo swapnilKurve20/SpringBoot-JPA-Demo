@@ -2,6 +2,8 @@ package com.example.demo.rest;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,12 +23,20 @@ import com.example.demo.model.Posts;
 @RequestMapping("/post")
 public class PostController extends BaseController {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(PostController.class);
+	
 	@PostMapping("/{userProfileId}")
 	public ResponseEntity<Object> addPost(@PathVariable(value = "userProfileId") String id,
 			@RequestBody PostRequestDto post) throws Exception {
-
-		Posts posts = getPostService().addPost(Long.parseLong(id), post);
-
+		LOGGER.info("Started add post call.");
+		
+		Posts posts = null;
+		try {
+			posts = getPostService().addPost(Long.parseLong(id), post);	
+		}catch (Exception e) {
+			getCustomExceptionHandler().logExcepton(e);
+		}
+		LOGGER.info("Completed add post call.");
 		return new ResponseEntity<>(posts.getId(), HttpStatus.OK);
 	}
 
@@ -49,7 +59,11 @@ public class PostController extends BaseController {
 	public ResponseEntity<Object> updatePost(@PathVariable(value = "userProfileId") String userProfileId,
 			@RequestBody PostRequestDto post) {
 
-		getPostService().updatePost(userProfileId, post);
+		try {
+			getPostService().updatePost(userProfileId, post);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return new ResponseEntity<Object>(HttpStatus.OK);
 	}
 }

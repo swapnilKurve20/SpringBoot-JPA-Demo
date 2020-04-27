@@ -8,23 +8,36 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.hibernate.query.NativeQuery;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.model.Tags;
+import com.example.demo.rest.TagsController;
 
 @Repository
 @Transactional
 @SuppressWarnings("unchecked")
 public class TagDaoImpl extends BaseDao implements TagDao {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(TagsController.class);
+	
 	@Override
 	public Tags getTag(Long tagId) {
-		return (Tags) getSession().get(Tags.class, tagId);
+		LOGGER.info("Started get tag call.");
+		Tags tag=null;
+		try {
+			tag = (Tags) getSession().get(Tags.class, tagId);
+		} catch (Exception e) {
+			getCustomExceptionHandler().logExcepton(e);
+		}
+		LOGGER.info("Completed get tag call.");
+		return tag;
 	}
 
 	@Override
 	public Tags getTagByName(String tagname) {
-
+		LOGGER.info("Started get tag by name call.");
 		Tags tag = null;
 		String getTagSql = "Select * from tags where name='" + tagname + "'";
 		try {
@@ -33,15 +46,16 @@ public class TagDaoImpl extends BaseDao implements TagDao {
 			List<Tags> tagList = queryObj.list();
 			tag = tagList.size() == 1 ? tagList.get(0) : null;
 		} catch (Exception e) {
-			e.printStackTrace();
+			getCustomExceptionHandler().logExcepton(e);
 		}
+		LOGGER.info("Completed get tag by name call.");
 		return tag;
 	}
 
 	@SuppressWarnings("rawtypes")
 	@Override
 	public List<Tags> getAllTags() {
-
+		LOGGER.info("Started get all tags call.");
 		String getTagSql = "Select * from tags";
 		List<Tags> tags = new ArrayList<>();
 		try {
@@ -58,8 +72,9 @@ public class TagDaoImpl extends BaseDao implements TagDao {
 			}
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			getCustomExceptionHandler().logExcepton(e);
 		}
+		LOGGER.info("Completed get all tags call.");
 		return tags;
 	}
 }
