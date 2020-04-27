@@ -8,7 +8,7 @@ public class UserProfilesDto {
 
 	private String address;
 
-	private UserDto userDto;
+	private UserDto user;
 
 	public UserProfilesDto() {
 		super();
@@ -18,6 +18,14 @@ public class UserProfilesDto {
 		super();
 		this.gender = gender;
 		this.address = address;
+	}
+
+	
+	public UserProfilesDto(String gender, String address, UserDto user) {
+		super();
+		this.gender = gender;
+		this.address = address;
+		this.user = user;
 	}
 
 	public String getId() {
@@ -45,11 +53,11 @@ public class UserProfilesDto {
 	}
 
 	public UserDto getUserDto() {
-		return userDto;
+		return user;
 	}
 
 	public void setUserDto(UserDto userDto) {
-		this.userDto = userDto;
+		this.user = userDto;
 	}
 
 }

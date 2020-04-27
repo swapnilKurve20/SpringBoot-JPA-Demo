@@ -2,6 +2,8 @@ package com.example.demo.dto;
 
 public class UserDto {
 
+	private String id;
+
 	private String firstName;
 
 	private String lastName;
@@ -22,6 +24,14 @@ public class UserDto {
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getFirstName() {

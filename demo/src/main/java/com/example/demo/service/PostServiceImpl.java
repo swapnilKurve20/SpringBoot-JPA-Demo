@@ -35,22 +35,24 @@ public class PostServiceImpl extends BaseService implements PostService {
 				p = new Posts(post.getTitle(), post.getDescription());
 				p.setAuthor(up);
 
-				Set<Tags> tags = new HashSet<>();
+				if (post.getTags() != null) {
+					Set<Tags> tags = new HashSet<>();
 
-				for (TagsDetails s : post.getTags()) {
-					Tags tag = getTagDao().getTagByName(s.getName());
-					if (tag == null) {
-						tag = new Tags();
-						tag.setName(s.getName());
-						tag.getPosts().add(p);
-						tags.add(tag);
-					} else {
-						tag = getTagDao().getTag(tag.getId());
-						tag.getPosts().add(p);
-						tags.add(tag);
+					for (TagsDetails s : post.getTags()) {
+						Tags tag = getTagDao().getTagByName(s.getName());
+						if (tag == null) {
+							tag = new Tags();
+							tag.setName(s.getName());
+							tag.getPosts().add(p);
+							tags.add(tag);
+						} else {
+							tag = getTagDao().getTag(tag.getId());
+							tag.getPosts().add(p);
+							tags.add(tag);
+						}
 					}
+					p.getTags().addAll(tags);
 				}
-				p.getTags().addAll(tags);
 				p = getPostDao().addPost(p);
 				if (p == null)
 					throw new Exception("Invalid post");

@@ -1,6 +1,8 @@
 package com.example.demo.service;
 
 import org.modelmapper.ModelMapper;
+import org.modelmapper.convention.MatchingStrategies;
+import org.modelmapper.spi.MatchingStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -68,8 +70,10 @@ public class BaseService {
 	}
 
 	public ModelMapper getModelMapper() {
-		if (modelMapper == null)
+		if (modelMapper == null) {
 			modelMapper = new ModelMapper();
+//			modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.LOOSE);
+		}
 		return modelMapper;
 	}
 

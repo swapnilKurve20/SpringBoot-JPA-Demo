@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.dto.PostResponseDto;
+import com.example.demo.dto.UserDto;
 import com.example.demo.dto.UserProfilesDto;
 import com.example.demo.dto.UserRequestDto;
 import com.example.demo.dto.UserResponseDto;
@@ -53,28 +54,24 @@ public class UserServiceImpl extends BaseService implements UserService {
 		LOGGER.info("Service : Entered get user method");
 		ModelMapper modelMapper = new ModelMapper();
 		UserResponseDto userResponseDto = null;
-		try {
-			User user = getUserDao().getUser(userId);
-			userResponseDto = modelMapper.map(user, UserResponseDto.class);
+		User user = getUserDao().getUser(userId);
+		userResponseDto = modelMapper.map(user, UserResponseDto.class);
 
-			UserProfiles userProfile = user.getUserProfile();
-			userResponseDto.setProfilesDto(modelMapper.map(userProfile, UserProfilesDto.class));
+		UserProfiles userProfile = user.getUserProfile();
+		userResponseDto.setProfilesDto(modelMapper.map(userProfile, UserProfilesDto.class));
 
-			Map<String, Posts> posts = getPostDao().getAllPostsByProfile(String.valueOf(userProfile.getId()));
+		Map<String, Posts> posts = getPostDao().getAllPostsByProfile(String.valueOf(userProfile.getId()));
 
-			if (posts != null) {
-				List<PostResponseDto> responseDtos = new ArrayList<>();
-				PostResponseDto dto;
-				for (Posts p : posts.values()) {
-					dto = getModelMapper().map(p, PostResponseDto.class);
-					responseDtos.add(dto);
-				}
-				userResponseDto.setPosts(responseDtos);
+		if (posts != null) {
+			List<PostResponseDto> responseDtos = new ArrayList<>();
+			PostResponseDto dto;
+			for (Posts p : posts.values()) {
+				dto = getModelMapper().map(p, PostResponseDto.class);
+				responseDtos.add(dto);
 			}
-
-		} catch (Exception e) {
-			getCustomExceptionHandler().logExcepton(e);
+			userResponseDto.setPosts(responseDtos);
 		}
+
 		LOGGER.info("Service : Completed get user method");
 		return userResponseDto;
 	}
