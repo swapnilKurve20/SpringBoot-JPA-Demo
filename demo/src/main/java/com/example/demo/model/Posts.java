@@ -32,7 +32,7 @@ public class Posts {
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinTable(name = "liked_by", joinColumns = { @JoinColumn(name = "post_id") }, inverseJoinColumns = {
 			@JoinColumn(name = "user_profile_id") })
-	private Set<UserProfiles> likedBy;
+	private Set<UserProfiles> likedBy = new HashSet<>();;
 
 	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinTable(name = "post_tags", joinColumns = { @JoinColumn(name = "post_id") }, inverseJoinColumns = {

@@ -8,13 +8,13 @@ appName.config(function($stateProvider,$locationProvider) {//,$urlProvider
 		templateUrl: 'view1.html',
 		controller : 'View1Controller'
 	})
-	.state("view2", {
-		url:'/view2',
+	.state("profile", {
+		url:'/profile',
 		templateUrl: 'view2.html',
 		controller : 'View2Controller'
 	})
-	.state("view3", {
-		url:'/view3',
+	.state("posts", {
+		url:'/posts',
 		templateUrl: 'view3.html',
 		controller : 'View3Controller'
 	})

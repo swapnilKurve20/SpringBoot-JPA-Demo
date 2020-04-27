@@ -4,7 +4,7 @@
 			<div class="card text-center bg-primary card-form">
 				<div class="card-body">
 					<h3>Sign Up & Subscribe</h3>
-					<p class="Capitalize">Please fill out the form for subscribe</p>
+					<p class="Capitalize">{{user.profileId}} Please fill out the form for subscribe</p>
 					<form name="userForm" ng-submit="saveDetails(userForm);" novalidate>
 						<div class="form-group">
 							<input class="form-control form-control-md" type="text" no-special-char ng-pattern="/^[a-zA-Z]*$/" name="firstName"
