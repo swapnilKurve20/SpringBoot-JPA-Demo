@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.model.UserProfiles;
-import com.example.demo.service.UserProfileServiceImpl;
 
 @Repository
 @Transactional

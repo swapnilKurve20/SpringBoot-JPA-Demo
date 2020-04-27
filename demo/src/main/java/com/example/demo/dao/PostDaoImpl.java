@@ -50,7 +50,7 @@ public class PostDaoImpl extends BaseDao implements PostDao {
 	@Override
 	public Map<String, Posts> getAllPostsByProfile(String profileId) {
 		LOGGER.info("Completed add post by profile call.");
-		String q1 = "Select p.id,p.description, p.title, p.user_profile_id, pt.post_id as tagsPostId, tag_id, l.post_id as likedPostId, l.user_profile_id as likeByUser from posts  p inner join post_tags pt on p.user_profile_id = 2 AND p.id = pt.post_id left join liked_by l on p.id = l.post_id";
+		String q1 = "Select p.id,p.description, p.title, p.user_profile_id, pt.post_id as tagsPostId, tag_id, l.post_id as likedPostId, l.user_profile_id as likeByUser from posts  p inner join post_tags pt on p.user_profile_id ="+ profileId +" AND p.id = pt.post_id left join liked_by l on p.id = l.post_id";
 		List<Posts> posts = new ArrayList<>();
 		Map<String, Posts> postMap = new HashMap();
 		try {
