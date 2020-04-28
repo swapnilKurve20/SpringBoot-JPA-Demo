@@ -49,4 +49,5 @@ public class UsersController extends BaseController {
 		LOGGER.info("Controller : Completed get user call returning results for id = "+ id);
 		return new ResponseEntity<Object>(userResponseDto,HttpStatus.OK);
 	}
+	
 }

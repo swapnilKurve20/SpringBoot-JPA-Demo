@@ -8,4 +8,5 @@ public interface TagService {
 
 	public TagResponseDto getTag(Long tagId);
 	public List<TagResponseDto> getAllTags();
+	String testTrnsaction() throws Exception;
 }

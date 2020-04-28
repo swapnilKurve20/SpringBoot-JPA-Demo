@@ -7,7 +7,8 @@ import javax.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
-
+import org.hibernate.Session;
+import org.hibernate.query.NativeQuery;
 import com.example.demo.model.User;
 
 @Repository
@@ -42,5 +43,17 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 		}
 		LOGGER.info("Dao : Completed get user method");
 		return user;
+	}
+	
+	public String insert2() throws Exception {
+
+		Session session = getSession();
+		int executeUpdate = 0;
+
+		NativeQuery createNativeQuery = session.createNativeQuery("insert into test2(name) values (:name)");
+		createNativeQuery.setParameter("name", "Santosh");
+		executeUpdate = createNativeQuery.executeUpdate();
+
+		return String.valueOf(executeUpdate);
 	}
 }

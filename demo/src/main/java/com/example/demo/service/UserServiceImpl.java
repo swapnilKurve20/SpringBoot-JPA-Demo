@@ -8,9 +8,10 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.dto.PostResponseDto;
-import com.example.demo.dto.UserDto;
 import com.example.demo.dto.UserProfilesDto;
 import com.example.demo.dto.UserRequestDto;
 import com.example.demo.dto.UserResponseDto;
@@ -19,6 +20,7 @@ import com.example.demo.model.User;
 import com.example.demo.model.UserProfiles;
 
 @Service
+@Transactional(transactionManager="hibernateTransactionManager", isolation=Isolation.SERIALIZABLE,rollbackFor=Exception.class) // specify transaction manager
 public class UserServiceImpl extends BaseService implements UserService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
@@ -75,4 +77,10 @@ public class UserServiceImpl extends BaseService implements UserService {
 		LOGGER.info("Service : Completed get user method");
 		return userResponseDto;
 	}
+	
+	public String insert2() throws Exception {
+		String insert2 = getUserDao().insert2();
+		// if(true) { throw new Exception("**************message"); }  
+	return insert2;
+}
 }

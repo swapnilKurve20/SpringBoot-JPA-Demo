@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Session;
 import org.hibernate.query.NativeQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,5 +47,17 @@ public class UserProfileDaoImpl extends BaseDao implements UserProfileDao {
 		}
 		LOGGER.info("Completed get user profile call.");
 		return userProfiles;
+	}
+	
+	public String insert1() {
+
+		int executeUpdate = 0;
+		Session session = getSession();
+		NativeQuery createNativeQuery = session.createNativeQuery("insert into test1(name) values (:name)");
+		createNativeQuery.setParameter("name", "Name2");
+		executeUpdate = createNativeQuery.executeUpdate();
+
+		System.out.println(executeUpdate);
+		return String.valueOf(executeUpdate);
 	}
 }

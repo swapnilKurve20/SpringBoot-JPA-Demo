@@ -3,12 +3,13 @@ package com.example.demo.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.dto.UserProfileResponseDto;
 import com.example.demo.model.UserProfiles;
-import com.example.demo.rest.UserProfilesController;
 
 @Service
+@Transactional(transactionManager="hibernateTransactionManager", rollbackFor=Exception.class) // specify transaction manager
 public class UserProfileServiceImpl extends BaseService implements UserProfileService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserProfileServiceImpl.class);
@@ -29,5 +30,12 @@ public class UserProfileServiceImpl extends BaseService implements UserProfileSe
 		}
 		LOGGER.info("Completed get user profile call.");
 		return userProfileResponseDto;
+	}
+
+	public String insert1() throws Exception {
+		String insert1 = null;
+		insert1 = getUserProfileDao().insert1();
+		/* if(true) { throw new Exception("**************message"); } */
+		return insert1;
 	}
 }

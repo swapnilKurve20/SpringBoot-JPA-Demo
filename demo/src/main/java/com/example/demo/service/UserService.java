@@ -6,4 +6,5 @@ import com.example.demo.dto.UserResponseDto;
 public interface UserService {
 	public Long saveUser(UserRequestDto user);
 	public UserResponseDto getUser(Long userId);
+	public String insert2() throws Exception;
 }

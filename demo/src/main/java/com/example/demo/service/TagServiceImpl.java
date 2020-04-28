@@ -5,17 +5,27 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.dto.TagResponseDto;
 import com.example.demo.model.Tags;
 import com.example.demo.rest.TagsController;
 
 @Service
+@Transactional(transactionManager="hibernateTransactionManager",rollbackFor=Exception.class) // specify transaction manager
 public class TagServiceImpl extends BaseService implements TagService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(TagsController.class);
 
+
+	@Autowired
+	private UserProfileService userProfileService;
+
+	@Autowired
+	private UserService userService;
+	
 	public TagResponseDto getTag(Long tagId) {
 		LOGGER.info("Started get tag call.");
 		TagResponseDto tagResponseDto = new TagResponseDto();
@@ -49,5 +59,16 @@ public class TagServiceImpl extends BaseService implements TagService {
 		}
 		LOGGER.info("Completed get all tags call.");
 		return tagList;
+	}
+	
+	public String testTrnsaction() throws Exception {
+		LOGGER.info("Started test transaction.");
+	    userProfileService.insert1();
+		if (true) {
+			throw new Exception("Testing Transaction..");
+		}
+		userService.insert2();
+		LOGGER.info("Completed test transaction.");
+		return "transaction op";
 	}
 }
