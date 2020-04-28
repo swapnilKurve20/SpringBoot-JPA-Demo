@@ -1,5 +1,12 @@
 var appName = angular.module('appName', ['ui.router']);
 
+appName.constant('RESOURCES', (function() {
+	  var protocol = 'http://';
+	return {
+		  PROD_DOMAIN: protocol + 'localhost:8080'
+	  }
+	})());
+
 appName.config(function($stateProvider,$locationProvider) {//,$urlProvider
 
 	$stateProvider

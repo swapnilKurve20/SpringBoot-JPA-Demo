@@ -1,9 +1,11 @@
-appName.service("View3Service", function($http,$q){
+appName.service("View3Service", function($http,$q,RESOURCES){
+	
+	var urlBase = RESOURCES.PROD_DOMAIN;
 
 	this.getUserById = function(loggedInUserId){		
 
 		var defer = $q.defer();
-		return $http.get('http://localhost:8080/users?id='+loggedInUserId)		
+		return $http.get(urlBase+'/users?id='+loggedInUserId)		
 			.then(function(response) {
 				defer.resolve(response.data);
 				return defer.promise;
