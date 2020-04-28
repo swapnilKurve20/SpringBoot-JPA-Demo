@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <configuration>
     
-        <appender name="Console"
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <charset>utf8</charset>
+        </encoder>
+    </appender>
+    
+<!--     <appender name="Console"
         class="ch.qos.logback.core.ConsoleAppender">
         <layout class="ch.qos.logback.classic.PatternLayout">
+        <Pattern> %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n%throwable</Pattern>
             <Pattern>
                 %black(%d{ISO8601}) %highlight(%-5level) [%blue(%t)] %yellow(%C{1.}): %msg%n%throwable
             </Pattern>
         </layout>
-    </appender>
+    </appender> -->
     
     <appender name="FILE-AUDIT" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>debug.log</file>
