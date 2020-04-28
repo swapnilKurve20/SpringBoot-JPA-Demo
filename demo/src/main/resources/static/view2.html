@@ -42,8 +42,16 @@
 						</div>
 						<div class="form-group">
 							<input class="form-control form-control-md" type="text"
-								ng-model="post.tags"
-								placeholder="Tags">
+								ng-model="post.tags" name="tags"
+								placeholder="Tags" ng-required="true">
+								<div style="color:white"
+								ng-show="postForm.tags.$error.required && postForm.tags.$touched">
+								required
+								</div>
+								<div style="color:white"
+								ng-show="postForm.$submitted && postForm.tags.$untouched">
+								Enter Tags
+								</div>
 						</div>
 						<div class="form-group">   <!-- ng-disabled="userForm.$invalid" -->
 							<input type="submit" 

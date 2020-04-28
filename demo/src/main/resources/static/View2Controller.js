@@ -5,6 +5,7 @@ var view2Controller = function($scope,$rootScope, View2Service,$state) {
 	$scope.profileId = "";
 	$scope.post={};
 	
+	
 	$scope.getUserDetails = function() {
 		
 		

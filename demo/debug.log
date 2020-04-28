@@ -1,0 +1,1396 @@
+16:36:14.896 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on Dell with PID 7112 (D:\ECLIPSE\gitRepo\socialMedia\SpringBoot-JPA-Demo\demo\target\classes started by DELL in D:\ECLIPSE\gitRepo\socialMedia\SpringBoot-JPA-Demo\demo)
+16:36:14.899 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+16:36:14.900 [restartedMain] INFO  com.example.demo.DemoApplication - No active profile set, falling back to default profiles: default
+16:36:14.972 [restartedMain] INFO  o.s.b.d.restart.ChangeableUrls - The Class-Path manifest attribute in C:\Users\DELL E7240\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/DELL%20E7240/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/DELL%20E7240/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/DELL%20E7240/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/DELL%20E7240/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/DELL%20E7240/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/DELL%20E7240/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+16:36:14.973 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+16:36:16.121 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:36:16.258 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 125ms. Found 4 JPA repository interfaces.
+16:36:17.426 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+16:36:17.439 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+16:36:17.439 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+16:36:17.574 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+16:36:17.574 [restartedMain] DEBUG o.s.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+16:36:17.574 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2601 ms
+16:36:17.613 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+16:36:17.613 [restartedMain] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+16:36:17.914 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.12.Final
+16:36:18.118 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+16:36:18.361 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+16:36:19.758 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+16:36:21.526 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+16:36:21.543 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+16:36:21.615 [restartedMain] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 10 mappings in 'requestMappingHandlerMapping'
+16:36:21.619 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [static/index.html]
+16:36:21.695 [restartedMain] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+16:36:21.993 [restartedMain] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+16:36:22.312 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4cb74c0c, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ed9afd7, org.springframework.security.web.header.HeaderWriterFilter@3d96b5a8, org.springframework.security.web.authentication.logout.LogoutFilter@177b0ac8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3b9ecf86, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a4fb74f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@222167e0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@9189289, org.springframework.security.web.session.SessionManagementFilter@5f5d4bee, org.springframework.security.web.access.ExceptionTranslationFilter@479bf583, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@523a0786]
+16:36:22.418 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+16:36:22.474 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+16:36:22.477 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 8.14 seconds (JVM running for 8.954)
+16:36:29.246 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+16:36:29.247 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+16:36:29.247 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+16:36:29.253 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+16:36:29.254 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+16:36:29.306 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+16:36:29.322 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+16:36:29.349 [http-nio-8080-exec-1] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+16:36:29.357 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 401
+16:36:29.872 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+16:36:29.873 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+16:36:29.877 [http-nio-8080-exec-2] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+16:36:29.878 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 401
+16:36:35.616 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+16:36:35.621 [http-nio-8080-exec-3] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+16:36:35.621 [http-nio-8080-exec-3] DEBUG o.s.w.s.view.InternalResourceView - View name 'forward:', model {}
+16:36:35.622 [http-nio-8080-exec-3] DEBUG o.s.w.s.view.InternalResourceView - Forwarding to [index.html]
+16:36:35.623 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - "FORWARD" dispatch for GET "/index.html", parameters={}
+16:36:35.625 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:35.640 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "FORWARD" dispatch, status 200
+16:36:35.641 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:35.675 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular.js", parameters={}
+16:36:35.679 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:35.679 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular-ui-router.min.js", parameters={}
+16:36:35.680 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View2Controller.js", parameters={}
+16:36:35.680 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:35.681 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:35.683 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View1Controller.js", parameters={}
+16:36:35.685 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:35.685 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/app.js", parameters={}
+16:36:35.686 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:35.688 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:35.689 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:35.690 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:35.691 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:35.706 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View3Controller.js", parameters={}
+16:36:35.708 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:35.711 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:35.714 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/SignUpService.js", parameters={}
+16:36:35.716 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:35.721 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View2Service.js", parameters={}
+16:36:35.722 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:35.724 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:35.729 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View3Service.js", parameters={}
+16:36:35.732 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View1Servic.js", parameters={}
+16:36:35.734 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:35.738 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:35.740 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:35.748 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:35.749 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:35.758 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/SignUpController.js", parameters={}
+16:36:35.759 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:35.769 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:35.777 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:38.553 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/signup.html", parameters={}
+16:36:38.554 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:38.556 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:53.759 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - POST "/users", parameters={}
+16:36:53.759 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#saveUser(UserRequestDto)
+16:36:53.823 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [UserRequestDto [firstName=Aarti, lastName=Ghugarkar, email=aartighugarkar@gmail.com, password=bmnb,  (truncated)...]
+16:36:53.830 [http-nio-8080-exec-5] INFO  c.example.demo.rest.UsersController - Controller : Started save user call.
+16:36:53.878 [http-nio-8080-exec-5] INFO  c.e.demo.service.UserServiceImpl - Service : Entered save user method
+16:36:53.884 [http-nio-8080-exec-5] INFO  com.example.demo.dao.UserDaoImpl - Dao : Entered save user method
+16:36:53.957 [http-nio-8080-exec-5] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed save user method
+16:36:53.957 [http-nio-8080-exec-5] INFO  c.e.demo.service.UserServiceImpl - Service : Completed save user method
+16:36:53.971 [http-nio-8080-exec-5] INFO  c.example.demo.rest.UsersController - Controller : Completed save user call for id = 1
+16:36:53.980 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:36:53.981 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [1]
+16:36:53.993 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:54.001 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=1", parameters={masked}
+16:36:54.002 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:36:54.005 [http-nio-8080-exec-6] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:36:54.045 [http-nio-8080-exec-6] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:36:54.070 [http-nio-8080-exec-6] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:36:54.097 [http-nio-8080-exec-6] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:36:54.161 [http-nio-8080-exec-6] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:36:54.209 [http-nio-8080-exec-6] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:36:54.209 [http-nio-8080-exec-6] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:36:54.212 [http-nio-8080-exec-6] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 1
+16:36:54.225 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:36:54.225 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@6451e268]
+16:36:54.229 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:55.349 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/view2.html", parameters={}
+16:36:55.353 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:55.356 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:57.371 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/view3.html", parameters={}
+16:36:57.372 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:57.374 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:57.384 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=1", parameters={masked}
+16:36:57.385 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:36:57.388 [http-nio-8080-exec-1] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:36:57.391 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:36:57.392 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:36:57.397 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:36:57.419 [http-nio-8080-exec-1] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:36:57.420 [http-nio-8080-exec-1] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:36:57.423 [http-nio-8080-exec-1] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:36:57.429 [http-nio-8080-exec-1] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:36:57.434 [http-nio-8080-exec-1] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:36:57.434 [http-nio-8080-exec-1] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:36:57.436 [http-nio-8080-exec-1] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 1
+16:36:57.437 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:36:57.437 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@12b5462c]
+16:36:57.438 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:37:12.462 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/post/1", parameters={}
+16:37:12.463 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.PostController#addPost(String, PostRequestDto)
+16:37:12.481 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.dto.PostRequestDto@34177d85]
+16:37:12.481 [http-nio-8080-exec-3] INFO  com.example.demo.rest.PostController - Started add post call.
+16:37:12.503 [http-nio-8080-exec-3] INFO  c.e.demo.service.PostServiceImpl - Started add post call.
+16:37:12.509 [http-nio-8080-exec-3] INFO  c.e.demo.dao.UserProfileDaoImpl - Started get user profile call.
+16:37:12.514 [http-nio-8080-exec-3] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:37:12.517 [http-nio-8080-exec-3] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:37:12.517 [http-nio-8080-exec-3] INFO  c.e.demo.dao.UserProfileDaoImpl - Completed get user profile call.
+16:37:12.522 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:12.525 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:12.525 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:12.527 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:12.527 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:12.528 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:12.529 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:12.530 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:12.530 [http-nio-8080-exec-3] INFO  com.example.demo.dao.PostDaoImpl - Started add post call.
+16:37:12.541 [http-nio-8080-exec-3] INFO  com.example.demo.dao.PostDaoImpl - Completed add post call.
+16:37:12.542 [http-nio-8080-exec-3] INFO  c.e.demo.service.PostServiceImpl - Completed add post call.
+16:37:12.562 [http-nio-8080-exec-3] INFO  com.example.demo.rest.PostController - Completed add post call.
+16:37:12.563 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:37:12.563 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [1]
+16:37:12.564 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:37:12.573 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:37:12.574 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:37:12.580 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:37:12.581 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=1", parameters={masked}
+16:37:12.581 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:37:12.582 [http-nio-8080-exec-4] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:37:12.606 [http-nio-8080-exec-4] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:37:12.606 [http-nio-8080-exec-4] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:37:12.610 [http-nio-8080-exec-4] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:37:12.620 [http-nio-8080-exec-4] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:37:12.627 [http-nio-8080-exec-4] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:12.629 [http-nio-8080-exec-4] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:12.630 [http-nio-8080-exec-4] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:12.631 [http-nio-8080-exec-4] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:12.631 [http-nio-8080-exec-4] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:12.632 [http-nio-8080-exec-4] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:12.632 [http-nio-8080-exec-4] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:12.633 [http-nio-8080-exec-4] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:12.633 [http-nio-8080-exec-4] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:37:12.638 [http-nio-8080-exec-4] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:37:12.640 [http-nio-8080-exec-4] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 1
+16:37:12.640 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:37:12.640 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@385bf469]
+16:37:12.645 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:37:12.652 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:37:12.653 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:37:12.654 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:37:44.218 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - POST "/post/1", parameters={}
+16:37:44.218 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.PostController#addPost(String, PostRequestDto)
+16:37:44.220 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.dto.PostRequestDto@1ae027df]
+16:37:44.220 [http-nio-8080-exec-2] INFO  com.example.demo.rest.PostController - Started add post call.
+16:37:44.237 [http-nio-8080-exec-2] INFO  c.e.demo.service.PostServiceImpl - Started add post call.
+16:37:44.237 [http-nio-8080-exec-2] INFO  c.e.demo.dao.UserProfileDaoImpl - Started get user profile call.
+16:37:44.239 [http-nio-8080-exec-2] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:37:44.241 [http-nio-8080-exec-2] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:37:44.242 [http-nio-8080-exec-2] INFO  c.e.demo.dao.UserProfileDaoImpl - Completed get user profile call.
+16:37:44.242 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:44.244 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:44.244 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:44.245 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:44.245 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:44.246 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:44.246 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:44.247 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:44.247 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:44.248 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:44.248 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:44.249 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:44.249 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:44.250 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:44.250 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:44.251 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:44.252 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:44.253 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:44.253 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:44.253 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:44.254 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:37:44.254 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:37:44.254 [http-nio-8080-exec-2] INFO  com.example.demo.dao.PostDaoImpl - Started add post call.
+16:37:44.263 [http-nio-8080-exec-2] INFO  com.example.demo.dao.PostDaoImpl - Completed add post call.
+16:37:44.264 [http-nio-8080-exec-2] INFO  c.e.demo.service.PostServiceImpl - Completed add post call.
+16:37:44.278 [http-nio-8080-exec-2] INFO  com.example.demo.rest.PostController - Completed add post call.
+16:37:44.278 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:37:44.279 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [2]
+16:37:44.279 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:37:44.287 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:37:44.288 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:37:44.293 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:37:44.294 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=1", parameters={masked}
+16:37:44.294 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:37:44.294 [http-nio-8080-exec-3] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:37:44.317 [http-nio-8080-exec-3] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:37:44.317 [http-nio-8080-exec-3] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:37:44.323 [http-nio-8080-exec-3] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:37:44.330 [http-nio-8080-exec-3] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:37:44.334 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.336 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.336 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.338 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.338 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.339 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.339 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.340 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.340 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.341 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.341 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.342 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.342 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.344 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.344 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.345 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.345 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.346 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.346 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.347 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.347 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.348 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.348 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.349 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.349 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.350 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.350 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.351 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.351 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:37:44.352 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:37:44.352 [http-nio-8080-exec-3] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:37:44.354 [http-nio-8080-exec-3] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:37:44.356 [http-nio-8080-exec-3] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 1
+16:37:44.357 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:37:44.357 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@3292bc2c]
+16:37:44.358 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:37:44.364 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:37:44.365 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:37:44.369 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:06.563 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - POST "/post/1", parameters={}
+16:38:06.564 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.PostController#addPost(String, PostRequestDto)
+16:38:06.565 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.dto.PostRequestDto@28d43c4a]
+16:38:06.566 [http-nio-8080-exec-4] INFO  com.example.demo.rest.PostController - Started add post call.
+16:38:06.589 [http-nio-8080-exec-4] INFO  c.e.demo.service.PostServiceImpl - Started add post call.
+16:38:06.589 [http-nio-8080-exec-4] INFO  c.e.demo.dao.UserProfileDaoImpl - Started get user profile call.
+16:38:06.591 [http-nio-8080-exec-4] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:06.594 [http-nio-8080-exec-4] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:06.594 [http-nio-8080-exec-4] INFO  c.e.demo.dao.UserProfileDaoImpl - Completed get user profile call.
+16:38:06.594 [http-nio-8080-exec-4] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:38:06.596 [http-nio-8080-exec-4] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:38:06.596 [http-nio-8080-exec-4] INFO  com.example.demo.dao.PostDaoImpl - Started add post call.
+16:38:06.598 [http-nio-8080-exec-4] INFO  com.example.demo.dao.PostDaoImpl - Completed add post call.
+16:38:06.598 [http-nio-8080-exec-4] INFO  c.e.demo.service.PostServiceImpl - Completed add post call.
+16:38:06.608 [http-nio-8080-exec-4] INFO  com.example.demo.rest.PostController - Completed add post call.
+16:38:06.609 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:38:06.609 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [3]
+16:38:06.610 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:06.620 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:38:06.621 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:38:06.624 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=1", parameters={masked}
+16:38:06.624 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:38:06.624 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:06.625 [http-nio-8080-exec-9] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:38:06.647 [http-nio-8080-exec-9] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:38:06.647 [http-nio-8080-exec-9] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:06.652 [http-nio-8080-exec-9] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:06.659 [http-nio-8080-exec-9] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:38:06.663 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.664 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.664 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.665 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.666 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.667 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.668 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.668 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.668 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.669 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.669 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.670 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.670 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.670 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.670 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.671 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.671 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.672 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.672 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.672 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.672 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.673 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.673 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.673 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.674 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.674 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.674 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.675 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.675 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.675 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.675 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:06.676 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:06.676 [http-nio-8080-exec-9] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:38:06.678 [http-nio-8080-exec-9] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:38:06.680 [http-nio-8080-exec-9] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 1
+16:38:06.680 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:38:06.680 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@47581cb8]
+16:38:06.681 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:06.687 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:38:06.688 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:38:06.690 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:22.493 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - POST "/post/1", parameters={}
+16:38:22.494 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.PostController#addPost(String, PostRequestDto)
+16:38:22.495 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.dto.PostRequestDto@321f992b]
+16:38:22.495 [http-nio-8080-exec-5] INFO  com.example.demo.rest.PostController - Started add post call.
+16:38:22.511 [http-nio-8080-exec-5] INFO  c.e.demo.service.PostServiceImpl - Started add post call.
+16:38:22.511 [http-nio-8080-exec-5] INFO  c.e.demo.dao.UserProfileDaoImpl - Started get user profile call.
+16:38:22.513 [http-nio-8080-exec-5] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:22.515 [http-nio-8080-exec-5] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:22.516 [http-nio-8080-exec-5] INFO  c.e.demo.dao.UserProfileDaoImpl - Completed get user profile call.
+16:38:22.516 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:38:22.517 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:38:22.518 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:38:22.519 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:38:22.519 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:38:22.520 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:38:22.520 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:38:22.521 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:38:22.521 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:38:22.522 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:38:22.522 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:38:22.523 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:38:22.523 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:38:22.524 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:38:22.524 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:38:22.525 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:38:22.525 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:38:22.526 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:38:22.526 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:38:22.527 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:38:22.527 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:38:22.528 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:38:22.528 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:38:22.529 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:38:22.529 [http-nio-8080-exec-5] INFO  com.example.demo.dao.PostDaoImpl - Started add post call.
+16:38:22.540 [http-nio-8080-exec-5] INFO  com.example.demo.dao.PostDaoImpl - Completed add post call.
+16:38:22.540 [http-nio-8080-exec-5] INFO  c.e.demo.service.PostServiceImpl - Completed add post call.
+16:38:22.556 [http-nio-8080-exec-5] INFO  com.example.demo.rest.PostController - Completed add post call.
+16:38:22.557 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:38:22.557 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [4]
+16:38:22.557 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:22.565 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:38:22.566 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:38:22.571 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:22.574 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=1", parameters={masked}
+16:38:22.575 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:38:22.576 [http-nio-8080-exec-8] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:38:22.611 [http-nio-8080-exec-8] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:38:22.611 [http-nio-8080-exec-8] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:22.614 [http-nio-8080-exec-8] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:22.618 [http-nio-8080-exec-8] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:38:22.622 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.623 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.623 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.625 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.625 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.626 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.626 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.627 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.627 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.628 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.628 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.629 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.629 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.629 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.629 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.630 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.630 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.631 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.631 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.631 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.631 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.632 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.632 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.633 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.633 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.633 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.633 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.634 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.634 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.635 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.635 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.635 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.635 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.636 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.636 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.637 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.637 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.637 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.638 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.638 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.638 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.639 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.639 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.639 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.639 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.640 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.640 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.640 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.640 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.641 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.641 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.642 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.642 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.643 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.643 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:22.643 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:22.643 [http-nio-8080-exec-8] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:38:22.646 [http-nio-8080-exec-8] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:38:22.649 [http-nio-8080-exec-8] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 1
+16:38:22.649 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:38:22.649 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@473612fc]
+16:38:22.650 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:22.656 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:38:22.657 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:38:22.659 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:45.087 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:38:45.088 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:38:45.100 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:45.104 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=1", parameters={masked}
+16:38:45.106 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:38:45.106 [http-nio-8080-exec-3] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:38:45.359 [http-nio-8080-exec-3] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:38:45.359 [http-nio-8080-exec-3] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:45.362 [http-nio-8080-exec-3] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:45.367 [http-nio-8080-exec-3] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:38:45.371 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.372 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.372 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.373 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.373 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.374 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.374 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.375 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.375 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.376 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.376 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.377 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.377 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.378 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.378 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.379 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.379 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.380 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.380 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.381 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.381 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.382 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.382 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.382 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.382 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.383 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.383 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.383 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.384 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.384 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.384 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.385 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.385 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.386 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.386 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.386 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.386 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.387 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.387 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.388 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.388 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.388 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.388 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.389 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.389 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.389 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.390 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.390 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.390 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.391 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.391 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.392 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.392 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.392 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.392 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:45.393 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:45.393 [http-nio-8080-exec-3] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:38:45.395 [http-nio-8080-exec-3] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:38:45.397 [http-nio-8080-exec-3] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 1
+16:38:45.398 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:38:45.398 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@694f05ab]
+16:38:45.399 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:45.413 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:38:45.414 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:38:45.416 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:49.215 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:38:49.216 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:38:49.221 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:49.221 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=1", parameters={masked}
+16:38:49.221 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:38:49.222 [http-nio-8080-exec-9] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:38:49.241 [http-nio-8080-exec-9] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:38:49.241 [http-nio-8080-exec-9] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:49.244 [http-nio-8080-exec-9] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:49.249 [http-nio-8080-exec-9] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:38:49.254 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.256 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.256 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.257 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.257 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.258 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.258 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.259 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.259 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.260 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.261 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.263 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.263 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.264 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.264 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.265 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.265 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.266 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.266 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.267 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.267 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.267 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.268 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.268 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.268 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.269 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.269 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.269 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.269 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.270 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.270 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.270 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.270 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.271 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.271 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.271 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.271 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.271 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.271 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.272 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.272 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.272 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.272 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.273 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.273 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.273 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.274 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.274 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.274 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.275 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.275 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.275 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.276 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.276 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.276 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:49.277 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:49.277 [http-nio-8080-exec-9] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:38:49.283 [http-nio-8080-exec-9] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:38:49.285 [http-nio-8080-exec-9] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 1
+16:38:49.285 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:38:49.285 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@509f8683]
+16:38:49.288 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:49.294 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:38:49.295 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:38:49.297 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:52.344 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:38:52.345 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:38:52.346 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=1", parameters={masked}
+16:38:52.347 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:38:52.347 [http-nio-8080-exec-2] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:38:52.351 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:52.371 [http-nio-8080-exec-2] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:38:52.372 [http-nio-8080-exec-2] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:52.375 [http-nio-8080-exec-2] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:52.380 [http-nio-8080-exec-2] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:38:52.384 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.385 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.385 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.386 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.386 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.387 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.387 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.388 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.388 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.388 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.388 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.389 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.389 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.389 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.390 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.390 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.390 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.391 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.391 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.391 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.392 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.394 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.394 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.395 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.395 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.396 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.396 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.396 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.396 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.397 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.397 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.397 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.398 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.398 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.398 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.399 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.399 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.399 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.399 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.400 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.400 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.400 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.400 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.401 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.401 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.401 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.401 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.402 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.402 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.402 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.402 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.403 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.403 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.403 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.404 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:52.404 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:52.404 [http-nio-8080-exec-2] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:38:52.406 [http-nio-8080-exec-2] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:38:52.408 [http-nio-8080-exec-2] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 1
+16:38:52.409 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:38:52.409 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@34ae7ce2]
+16:38:52.410 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:52.416 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:38:52.417 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:38:52.418 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:53.746 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:38:53.747 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:38:53.752 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=1", parameters={masked}
+16:38:53.752 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:53.752 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:38:53.753 [http-nio-8080-exec-10] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:38:53.772 [http-nio-8080-exec-10] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:38:53.772 [http-nio-8080-exec-10] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:53.775 [http-nio-8080-exec-10] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:38:53.781 [http-nio-8080-exec-10] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:38:53.784 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.786 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.786 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.787 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.787 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.788 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.788 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.788 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.788 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.789 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.789 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.790 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.790 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.791 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.791 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.793 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.793 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.795 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.796 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.796 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.797 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.797 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.797 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.798 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.798 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.799 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.799 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.800 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.800 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.800 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.800 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.801 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.801 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.801 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.802 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.802 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.802 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.803 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.803 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.804 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.804 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.804 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.804 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.805 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.805 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.806 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.806 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.806 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.807 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.807 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.807 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.808 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.808 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.809 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.809 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:38:53.811 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:38:53.811 [http-nio-8080-exec-10] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:38:53.813 [http-nio-8080-exec-10] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:38:53.816 [http-nio-8080-exec-10] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 1
+16:38:53.817 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:38:53.817 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@75c37cfb]
+16:38:53.818 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:38:53.826 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:38:53.827 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:38:53.830 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:00.097 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+16:39:00.098 [http-nio-8080-exec-4] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+16:39:00.098 [http-nio-8080-exec-4] DEBUG o.s.w.s.view.InternalResourceView - View name 'forward:', model {}
+16:39:00.098 [http-nio-8080-exec-4] DEBUG o.s.w.s.view.InternalResourceView - Forwarding to [index.html]
+16:39:00.099 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - "FORWARD" dispatch for GET "/index.html", parameters={}
+16:39:00.099 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:00.102 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "FORWARD" dispatch, status 200
+16:39:00.103 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:00.133 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular-ui-router.min.js", parameters={}
+16:39:00.135 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:00.133 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular.js", parameters={}
+16:39:00.136 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/app.js", parameters={}
+16:39:00.136 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:00.137 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View1Controller.js", parameters={}
+16:39:00.137 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:00.142 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:00.144 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View1Servic.js", parameters={}
+16:39:00.145 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:00.148 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:00.150 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View2Controller.js", parameters={}
+16:39:00.150 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:00.152 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:00.154 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View3Controller.js", parameters={}
+16:39:00.158 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:00.162 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:00.163 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:00.165 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:00.166 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:00.169 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/SignUpController.js", parameters={}
+16:39:00.169 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:00.171 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:00.175 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/SignUpService.js", parameters={}
+16:39:00.177 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:00.179 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View3Service.js", parameters={}
+16:39:00.180 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View2Service.js", parameters={}
+16:39:00.182 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:00.183 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:00.183 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:00.184 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:00.186 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:00.198 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:03.183 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/signup.html", parameters={}
+16:39:03.184 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:03.185 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:40.936 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - POST "/users", parameters={}
+16:39:40.937 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#saveUser(UserRequestDto)
+16:39:40.937 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [UserRequestDto [firstName=njjnb, lastName=bmnb, email=mnb@hjkh, password=mnbmnb, gender=female, addr (truncated)...]
+16:39:40.937 [http-nio-8080-exec-9] INFO  c.example.demo.rest.UsersController - Controller : Started save user call.
+16:39:40.956 [http-nio-8080-exec-9] INFO  c.e.demo.service.UserServiceImpl - Service : Entered save user method
+16:39:40.956 [http-nio-8080-exec-9] INFO  com.example.demo.dao.UserDaoImpl - Dao : Entered save user method
+16:39:40.961 [http-nio-8080-exec-9] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed save user method
+16:39:40.961 [http-nio-8080-exec-9] INFO  c.e.demo.service.UserServiceImpl - Service : Completed save user method
+16:39:40.969 [http-nio-8080-exec-9] INFO  c.example.demo.rest.UsersController - Controller : Completed save user call for id = 2
+16:39:40.970 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:39:40.970 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [2]
+16:39:40.970 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:40.976 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=2", parameters={masked}
+16:39:40.976 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:39:40.976 [http-nio-8080-exec-1] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:39:40.994 [http-nio-8080-exec-1] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:39:40.995 [http-nio-8080-exec-1] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:39:40.998 [http-nio-8080-exec-1] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:39:41.000 [http-nio-8080-exec-1] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:39:41.002 [http-nio-8080-exec-1] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:39:41.002 [http-nio-8080-exec-1] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:39:41.003 [http-nio-8080-exec-1] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 2
+16:39:41.004 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:39:41.004 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@5c4a9e5d]
+16:39:41.005 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:42.393 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/view2.html", parameters={}
+16:39:42.394 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:42.395 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:54.354 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/post/2", parameters={}
+16:39:54.354 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.PostController#addPost(String, PostRequestDto)
+16:39:54.355 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.dto.PostRequestDto@468f3739]
+16:39:54.355 [http-nio-8080-exec-3] INFO  com.example.demo.rest.PostController - Started add post call.
+16:39:54.374 [http-nio-8080-exec-3] INFO  c.e.demo.service.PostServiceImpl - Started add post call.
+16:39:54.374 [http-nio-8080-exec-3] INFO  c.e.demo.dao.UserProfileDaoImpl - Started get user profile call.
+16:39:54.376 [http-nio-8080-exec-3] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:39:54.378 [http-nio-8080-exec-3] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:39:54.378 [http-nio-8080-exec-3] INFO  c.e.demo.dao.UserProfileDaoImpl - Completed get user profile call.
+16:39:54.378 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:39:54.380 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:39:54.380 [http-nio-8080-exec-3] INFO  com.example.demo.dao.PostDaoImpl - Started add post call.
+16:39:54.383 [http-nio-8080-exec-3] INFO  com.example.demo.dao.PostDaoImpl - Completed add post call.
+16:39:54.383 [http-nio-8080-exec-3] INFO  c.e.demo.service.PostServiceImpl - Completed add post call.
+16:39:54.392 [http-nio-8080-exec-3] INFO  com.example.demo.rest.PostController - Completed add post call.
+16:39:54.392 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:39:54.392 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [5]
+16:39:54.393 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:54.398 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/view3.html", parameters={}
+16:39:54.398 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:54.400 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:54.411 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=2", parameters={masked}
+16:39:54.412 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:39:54.412 [http-nio-8080-exec-5] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:39:54.417 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:39:54.418 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:54.420 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:54.440 [http-nio-8080-exec-5] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:39:54.440 [http-nio-8080-exec-5] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:39:54.443 [http-nio-8080-exec-5] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:39:54.446 [http-nio-8080-exec-5] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:39:54.449 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:39:54.450 [http-nio-8080-exec-5] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:39:54.451 [http-nio-8080-exec-5] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:39:54.451 [http-nio-8080-exec-5] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:39:54.452 [http-nio-8080-exec-5] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 2
+16:39:54.453 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:39:54.453 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@a1541f6]
+16:39:54.454 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:39:54.463 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:39:54.464 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:39:54.465 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:40:31.266 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular-ui-router.min.js.map", parameters={}
+16:40:31.266 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:40:31.268 [http-nio-8080-exec-10] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+16:40:31.268 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+16:40:31.268 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+16:40:31.269 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+16:40:31.273 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:40:31.274 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Tue Apr 28 16:40:31 IST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+16:40:31.283 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+16:40:53.107 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/post/2", parameters={}
+16:40:53.107 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.PostController#addPost(String, PostRequestDto)
+16:40:53.108 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.dto.PostRequestDto@7a61f60f]
+16:40:53.108 [http-nio-8080-exec-3] INFO  com.example.demo.rest.PostController - Started add post call.
+16:40:53.124 [http-nio-8080-exec-3] INFO  c.e.demo.service.PostServiceImpl - Started add post call.
+16:40:53.124 [http-nio-8080-exec-3] INFO  c.e.demo.dao.UserProfileDaoImpl - Started get user profile call.
+16:40:53.126 [http-nio-8080-exec-3] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:40:53.128 [http-nio-8080-exec-3] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:40:53.128 [http-nio-8080-exec-3] INFO  c.e.demo.dao.UserProfileDaoImpl - Completed get user profile call.
+16:40:53.128 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:40:53.130 [http-nio-8080-exec-3] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:40:53.130 [http-nio-8080-exec-3] INFO  com.example.demo.dao.PostDaoImpl - Started add post call.
+16:40:53.139 [http-nio-8080-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 22001
+16:40:53.139 [http-nio-8080-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: value too long for type character varying(255)
+16:40:53.143 [http-nio-8080-exec-3] INFO  com.example.demo.dao.PostDaoImpl - Completed add post call.
+16:40:53.144 [http-nio-8080-exec-3] INFO  c.e.demo.service.PostServiceImpl - Completed add post call.
+16:40:53.145 [http-nio-8080-exec-3] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 25P02
+16:40:53.145 [http-nio-8080-exec-3] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: current transaction is aborted, commands ignored until end of transaction block
+16:40:53.149 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+16:40:53.149 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing ["Something went wrong !"]
+16:40:53.150 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+16:41:04.652 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - POST "/post/2", parameters={}
+16:41:04.653 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.PostController#addPost(String, PostRequestDto)
+16:41:04.654 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.dto.PostRequestDto@39da4a4d]
+16:41:04.655 [http-nio-8080-exec-6] INFO  com.example.demo.rest.PostController - Started add post call.
+16:41:04.677 [http-nio-8080-exec-6] INFO  c.e.demo.service.PostServiceImpl - Started add post call.
+16:41:04.677 [http-nio-8080-exec-6] INFO  c.e.demo.dao.UserProfileDaoImpl - Started get user profile call.
+16:41:04.680 [http-nio-8080-exec-6] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:41:04.683 [http-nio-8080-exec-6] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:41:04.683 [http-nio-8080-exec-6] INFO  c.e.demo.dao.UserProfileDaoImpl - Completed get user profile call.
+16:41:04.683 [http-nio-8080-exec-6] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:41:04.685 [http-nio-8080-exec-6] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:41:04.685 [http-nio-8080-exec-6] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:41:04.687 [http-nio-8080-exec-6] ERROR c.e.d.e.CustomExceptionHandler - java.lang.ClassCastException: [Ljava.lang.Object; cannot be cast to com.example.demo.model.Tags
+	at com.example.demo.dao.TagDaoImpl.getTagByName(TagDaoImpl.java:47)
+	at com.example.demo.dao.TagDaoImpl$$FastClassBySpringCGLIB$$a4e48dce.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.example.demo.dao.TagDaoImpl$$EnhancerBySpringCGLIB$$f944707e.getTagByName(<generated>)
+	at com.example.demo.service.PostServiceImpl.addPost(PostServiceImpl.java:42)
+	at com.example.demo.service.PostServiceImpl$$FastClassBySpringCGLIB$$e1c4a3a2.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:366)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)
+	at com.example.demo.service.PostServiceImpl$$EnhancerBySpringCGLIB$$bae6f67a.addPost(<generated>)
+	at com.example.demo.rest.PostController.addPost(PostController.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:204)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+16:41:04.688 [http-nio-8080-exec-6] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:41:04.688 [http-nio-8080-exec-6] INFO  com.example.demo.dao.PostDaoImpl - Started add post call.
+16:41:04.689 [http-nio-8080-exec-6] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 22001
+16:41:04.689 [http-nio-8080-exec-6] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: value too long for type character varying(255)
+16:41:04.691 [http-nio-8080-exec-6] INFO  com.example.demo.dao.PostDaoImpl - Completed add post call.
+16:41:04.692 [http-nio-8080-exec-6] INFO  c.e.demo.service.PostServiceImpl - Completed add post call.
+16:41:04.693 [http-nio-8080-exec-6] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 25P02
+16:41:04.693 [http-nio-8080-exec-6] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: current transaction is aborted, commands ignored until end of transaction block
+16:41:04.694 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [text/plain, */*, text/plain, */*, application/json, application/*+json, application/json, application/*+json]
+16:41:04.695 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing ["Something went wrong !"]
+16:41:04.695 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 500 INTERNAL_SERVER_ERROR
+16:41:21.762 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - POST "/post/2", parameters={}
+16:41:21.763 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.PostController#addPost(String, PostRequestDto)
+16:41:21.764 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.dto.PostRequestDto@44576326]
+16:41:21.764 [http-nio-8080-exec-8] INFO  com.example.demo.rest.PostController - Started add post call.
+16:41:21.788 [http-nio-8080-exec-8] INFO  c.e.demo.service.PostServiceImpl - Started add post call.
+16:41:21.788 [http-nio-8080-exec-8] INFO  c.e.demo.dao.UserProfileDaoImpl - Started get user profile call.
+16:41:21.791 [http-nio-8080-exec-8] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:41:21.793 [http-nio-8080-exec-8] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:41:21.793 [http-nio-8080-exec-8] INFO  c.e.demo.dao.UserProfileDaoImpl - Completed get user profile call.
+16:41:21.793 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:41:21.794 [http-nio-8080-exec-8] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:41:21.795 [http-nio-8080-exec-8] INFO  com.example.demo.dao.PostDaoImpl - Started add post call.
+16:41:21.797 [http-nio-8080-exec-8] INFO  com.example.demo.dao.PostDaoImpl - Completed add post call.
+16:41:21.797 [http-nio-8080-exec-8] INFO  c.e.demo.service.PostServiceImpl - Completed add post call.
+16:41:21.808 [http-nio-8080-exec-8] INFO  com.example.demo.rest.PostController - Completed add post call.
+16:41:21.808 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:41:21.808 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [6]
+16:41:21.809 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:41:21.817 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:41:21.817 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:41:21.820 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=2", parameters={masked}
+16:41:21.821 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:41:21.821 [http-nio-8080-exec-2] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:41:21.821 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:41:21.855 [http-nio-8080-exec-2] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:41:21.856 [http-nio-8080-exec-2] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:41:21.859 [http-nio-8080-exec-2] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:41:21.862 [http-nio-8080-exec-2] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:41:21.865 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:41:21.866 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:41:21.866 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:41:21.867 [http-nio-8080-exec-2] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:41:21.867 [http-nio-8080-exec-2] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:41:21.867 [http-nio-8080-exec-2] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:41:21.868 [http-nio-8080-exec-2] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 2
+16:41:21.869 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:41:21.869 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@4f9a241a]
+16:41:21.870 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:41:21.875 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:41:21.876 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:41:21.878 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:38.550 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+16:42:38.551 [http-nio-8080-exec-7] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+16:42:38.551 [http-nio-8080-exec-7] DEBUG o.s.w.s.view.InternalResourceView - View name 'forward:', model {}
+16:42:38.551 [http-nio-8080-exec-7] DEBUG o.s.w.s.view.InternalResourceView - Forwarding to [index.html]
+16:42:38.551 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - "FORWARD" dispatch for GET "/index.html", parameters={}
+16:42:38.552 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:38.554 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "FORWARD" dispatch, status 200
+16:42:38.554 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:38.571 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular-ui-router.min.js", parameters={}
+16:42:38.571 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular.js", parameters={}
+16:42:38.571 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:38.572 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:38.577 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:38.595 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/app.js", parameters={}
+16:42:38.595 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:38.595 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View1Controller.js", parameters={}
+16:42:38.596 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:38.597 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:38.600 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:38.605 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View2Controller.js", parameters={}
+16:42:38.606 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:38.610 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:38.622 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View3Controller.js", parameters={}
+16:42:38.623 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:38.625 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:38.628 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View1Servic.js", parameters={}
+16:42:38.629 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:38.633 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:38.644 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View2Service.js", parameters={}
+16:42:38.644 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:38.649 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:38.678 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View3Service.js", parameters={}
+16:42:38.679 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:38.683 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:38.687 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/SignUpController.js", parameters={}
+16:42:38.688 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:38.691 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/SignUpService.js", parameters={}
+16:42:38.692 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:38.694 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:38.700 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:38.837 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:39.131 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+16:42:39.132 [http-nio-8080-exec-6] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+16:42:39.132 [http-nio-8080-exec-6] DEBUG o.s.w.s.view.InternalResourceView - View name 'forward:', model {}
+16:42:39.132 [http-nio-8080-exec-6] DEBUG o.s.w.s.view.InternalResourceView - Forwarding to [index.html]
+16:42:39.133 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - "FORWARD" dispatch for GET "/index.html", parameters={}
+16:42:39.133 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:39.136 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "FORWARD" dispatch, status 200
+16:42:39.137 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:39.169 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular.js", parameters={}
+16:42:39.169 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:39.171 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/app.js", parameters={}
+16:42:39.172 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:39.176 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:39.177 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View1Controller.js", parameters={}
+16:42:39.178 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:39.183 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:39.184 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View2Controller.js", parameters={}
+16:42:39.185 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:39.171 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular-ui-router.min.js", parameters={}
+16:42:39.185 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:39.186 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View3Controller.js", parameters={}
+16:42:39.186 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:39.187 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:39.188 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:39.188 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View1Servic.js", parameters={}
+16:42:39.189 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:39.189 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:39.190 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:39.204 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View3Service.js", parameters={}
+16:42:39.204 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:39.205 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View2Service.js", parameters={}
+16:42:39.208 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:39.209 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:39.210 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:39.212 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/SignUpController.js", parameters={}
+16:42:39.213 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:39.217 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:39.220 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/SignUpService.js", parameters={}
+16:42:39.220 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:39.222 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:39.227 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:41.010 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/signup.html", parameters={}
+16:42:41.011 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:41.014 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:51.072 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - POST "/users", parameters={}
+16:42:51.072 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#saveUser(UserRequestDto)
+16:42:51.073 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [UserRequestDto [firstName=hgvnh, lastName=vbnvn, email=vhvnb@hjvhm, password=nbvnb, gender=female, a (truncated)...]
+16:42:51.073 [http-nio-8080-exec-9] INFO  c.example.demo.rest.UsersController - Controller : Started save user call.
+16:42:51.091 [http-nio-8080-exec-9] INFO  c.e.demo.service.UserServiceImpl - Service : Entered save user method
+16:42:51.091 [http-nio-8080-exec-9] INFO  com.example.demo.dao.UserDaoImpl - Dao : Entered save user method
+16:42:51.095 [http-nio-8080-exec-9] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed save user method
+16:42:51.095 [http-nio-8080-exec-9] INFO  c.e.demo.service.UserServiceImpl - Service : Completed save user method
+16:42:51.099 [http-nio-8080-exec-9] INFO  c.example.demo.rest.UsersController - Controller : Completed save user call for id = 3
+16:42:51.100 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:42:51.100 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [3]
+16:42:51.100 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:51.105 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=3", parameters={masked}
+16:42:51.106 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:42:51.106 [http-nio-8080-exec-4] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:42:51.123 [http-nio-8080-exec-4] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:42:51.123 [http-nio-8080-exec-4] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:42:51.126 [http-nio-8080-exec-4] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:42:51.130 [http-nio-8080-exec-4] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:42:51.133 [http-nio-8080-exec-4] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:42:51.134 [http-nio-8080-exec-4] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:42:51.135 [http-nio-8080-exec-4] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 3
+16:42:51.135 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:42:51.135 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@44f5f79c]
+16:42:51.136 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:42:51.739 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/view2.html", parameters={}
+16:42:51.739 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:42:51.744 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:43:00.719 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular-ui-router.min.js.map", parameters={}
+16:43:00.719 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:43:00.724 [http-nio-8080-exec-7] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+16:43:00.724 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+16:43:00.724 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+16:43:00.725 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+16:43:00.725 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:43:00.725 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Tue Apr 28 16:43:00 IST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+16:43:00.726 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+16:44:02.435 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - POST "/post/3", parameters={}
+16:44:02.436 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.PostController#addPost(String, PostRequestDto)
+16:44:02.437 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.dto.PostRequestDto@c585f6b]
+16:44:02.437 [http-nio-8080-exec-9] INFO  com.example.demo.rest.PostController - Started add post call.
+16:44:02.466 [http-nio-8080-exec-9] INFO  c.e.demo.service.PostServiceImpl - Started add post call.
+16:44:02.466 [http-nio-8080-exec-9] INFO  c.e.demo.dao.UserProfileDaoImpl - Started get user profile call.
+16:44:02.469 [http-nio-8080-exec-9] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:44:02.471 [http-nio-8080-exec-9] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:44:02.471 [http-nio-8080-exec-9] INFO  c.e.demo.dao.UserProfileDaoImpl - Completed get user profile call.
+16:44:02.471 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:44:02.473 [http-nio-8080-exec-9] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:44:02.473 [http-nio-8080-exec-9] INFO  com.example.demo.dao.PostDaoImpl - Started add post call.
+16:44:02.476 [http-nio-8080-exec-9] INFO  com.example.demo.dao.PostDaoImpl - Completed add post call.
+16:44:02.476 [http-nio-8080-exec-9] INFO  c.e.demo.service.PostServiceImpl - Completed add post call.
+16:44:02.486 [http-nio-8080-exec-9] INFO  com.example.demo.rest.PostController - Completed add post call.
+16:44:02.487 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:44:02.487 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [7]
+16:44:02.488 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:44:02.496 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/view3.html", parameters={}
+16:44:02.497 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:44:02.499 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:44:02.513 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=3", parameters={masked}
+16:44:02.513 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:44:02.513 [http-nio-8080-exec-1] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:44:02.519 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:44:02.519 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:44:02.521 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:44:02.542 [http-nio-8080-exec-1] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:44:02.542 [http-nio-8080-exec-1] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:44:02.546 [http-nio-8080-exec-1] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:44:02.549 [http-nio-8080-exec-1] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:44:02.552 [http-nio-8080-exec-1] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:44:02.553 [http-nio-8080-exec-1] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:44:02.553 [http-nio-8080-exec-1] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:44:02.553 [http-nio-8080-exec-1] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:44:02.554 [http-nio-8080-exec-1] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 3
+16:44:02.555 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:44:02.555 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@2e87c4e0]
+16:44:02.555 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:44:02.562 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:44:02.563 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:44:02.564 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.076 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+16:46:47.077 [http-nio-8080-exec-5] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+16:46:47.077 [http-nio-8080-exec-5] DEBUG o.s.w.s.view.InternalResourceView - View name 'forward:', model {}
+16:46:47.077 [http-nio-8080-exec-5] DEBUG o.s.w.s.view.InternalResourceView - Forwarding to [index.html]
+16:46:47.077 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - "FORWARD" dispatch for GET "/index.html", parameters={}
+16:46:47.078 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.080 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "FORWARD" dispatch, status 200
+16:46:47.080 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.127 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular.js", parameters={}
+16:46:47.127 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular-ui-router.min.js", parameters={}
+16:46:47.127 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.127 [http-nio-8080-exec-10] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.132 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.137 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/app.js", parameters={}
+16:46:47.138 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.141 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.152 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View1Controller.js", parameters={}
+16:46:47.152 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View2Controller.js", parameters={}
+16:46:47.152 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.152 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.154 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.155 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.161 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View3Controller.js", parameters={}
+16:46:47.161 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.162 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View1Servic.js", parameters={}
+16:46:47.162 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.163 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.164 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.167 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View2Service.js", parameters={}
+16:46:47.167 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.167 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View3Service.js", parameters={}
+16:46:47.168 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.168 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.169 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.172 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/SignUpController.js", parameters={}
+16:46:47.173 [http-nio-8080-exec-5] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.174 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/SignUpService.js", parameters={}
+16:46:47.174 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.174 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.176 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.204 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.737 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/", parameters={}
+16:46:47.738 [http-nio-8080-exec-9] DEBUG o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8]
+16:46:47.738 [http-nio-8080-exec-9] DEBUG o.s.w.s.view.InternalResourceView - View name 'forward:', model {}
+16:46:47.738 [http-nio-8080-exec-9] DEBUG o.s.w.s.view.InternalResourceView - Forwarding to [index.html]
+16:46:47.738 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - "FORWARD" dispatch for GET "/index.html", parameters={}
+16:46:47.739 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.746 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "FORWARD" dispatch, status 200
+16:46:47.748 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.785 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular.js", parameters={}
+16:46:47.785 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.794 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/angular-ui-router.min.js", parameters={}
+16:46:47.795 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.801 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.804 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View1Servic.js", parameters={}
+16:46:47.805 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.808 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.811 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View1Controller.js", parameters={}
+16:46:47.812 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.815 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.817 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View2Controller.js", parameters={}
+16:46:47.817 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.820 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.822 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/View3Controller.js", parameters={}
+16:46:47.823 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.829 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.832 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View2Service.js", parameters={}
+16:46:47.832 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.834 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.835 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/View3Service.js", parameters={}
+16:46:47.835 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.835 [http-nio-8080-exec-7] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.840 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/app.js", parameters={}
+16:46:47.845 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/SignUpController.js", parameters={}
+16:46:47.846 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/service/SignUpService.js", parameters={}
+16:46:47.847 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.848 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.854 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.855 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.857 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:47.861 [http-nio-8080-exec-6] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:47.864 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:49.888 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/signup.html", parameters={}
+16:46:49.889 [http-nio-8080-exec-8] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:49.890 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:58.403 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/users", parameters={}
+16:46:58.403 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#saveUser(UserRequestDto)
+16:46:58.404 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [UserRequestDto [firstName=bjmb, lastName=hvnb, email=vhnv@fhv, password=bmn, gender=female, address= (truncated)...]
+16:46:58.404 [http-nio-8080-exec-3] INFO  c.example.demo.rest.UsersController - Controller : Started save user call.
+16:46:58.424 [http-nio-8080-exec-3] INFO  c.e.demo.service.UserServiceImpl - Service : Entered save user method
+16:46:58.424 [http-nio-8080-exec-3] INFO  com.example.demo.dao.UserDaoImpl - Dao : Entered save user method
+16:46:58.428 [http-nio-8080-exec-3] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed save user method
+16:46:58.428 [http-nio-8080-exec-3] INFO  c.e.demo.service.UserServiceImpl - Service : Completed save user method
+16:46:58.437 [http-nio-8080-exec-3] INFO  c.example.demo.rest.UsersController - Controller : Completed save user call for id = 4
+16:46:58.438 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:46:58.438 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [4]
+16:46:58.438 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:58.442 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=4", parameters={masked}
+16:46:58.443 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:46:58.443 [http-nio-8080-exec-5] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:46:58.465 [http-nio-8080-exec-5] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:46:58.465 [http-nio-8080-exec-5] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:46:58.468 [http-nio-8080-exec-5] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:46:58.475 [http-nio-8080-exec-5] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:46:58.478 [http-nio-8080-exec-5] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:46:58.478 [http-nio-8080-exec-5] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:46:58.479 [http-nio-8080-exec-5] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 4
+16:46:58.479 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:46:58.479 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@35ff5021]
+16:46:58.481 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:46:59.631 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/view2.html", parameters={}
+16:46:59.631 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:46:59.632 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:47:12.843 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - POST "/post/4", parameters={}
+16:47:12.844 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.PostController#addPost(String, PostRequestDto)
+16:47:12.845 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [com.example.demo.dto.PostRequestDto@6fb7bcb7]
+16:47:12.845 [http-nio-8080-exec-10] INFO  com.example.demo.rest.PostController - Started add post call.
+16:47:12.865 [http-nio-8080-exec-10] INFO  c.e.demo.service.PostServiceImpl - Started add post call.
+16:47:12.865 [http-nio-8080-exec-10] INFO  c.e.demo.dao.UserProfileDaoImpl - Started get user profile call.
+16:47:12.867 [http-nio-8080-exec-10] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:47:12.869 [http-nio-8080-exec-10] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:47:12.869 [http-nio-8080-exec-10] INFO  c.e.demo.dao.UserProfileDaoImpl - Completed get user profile call.
+16:47:12.869 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Started get tag by name call.
+16:47:12.871 [http-nio-8080-exec-10] INFO  com.example.demo.rest.TagsController - Completed get tag by name call.
+16:47:12.871 [http-nio-8080-exec-10] INFO  com.example.demo.dao.PostDaoImpl - Started add post call.
+16:47:12.874 [http-nio-8080-exec-10] INFO  com.example.demo.dao.PostDaoImpl - Completed add post call.
+16:47:12.874 [http-nio-8080-exec-10] INFO  c.e.demo.service.PostServiceImpl - Completed add post call.
+16:47:12.880 [http-nio-8080-exec-10] INFO  com.example.demo.rest.PostController - Completed add post call.
+16:47:12.880 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:47:12.880 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [8]
+16:47:12.881 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:47:12.886 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - GET "/view3.html", parameters={}
+16:47:12.886 [http-nio-8080-exec-9] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:47:12.888 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:47:12.901 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/users?id=4", parameters={masked}
+16:47:12.902 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.example.demo.rest.UsersController#getUser(String)
+16:47:12.902 [http-nio-8080-exec-7] INFO  c.example.demo.rest.UsersController - Controller : Started get user call.
+16:47:12.908 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:47:12.909 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:47:12.911 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:47:12.932 [http-nio-8080-exec-7] INFO  c.e.demo.service.UserServiceImpl - Service : Entered get user method
+16:47:12.932 [http-nio-8080-exec-7] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:47:12.935 [http-nio-8080-exec-7] INFO  com.example.demo.dao.UserDaoImpl - Dao : Completed get user method
+16:47:12.938 [http-nio-8080-exec-7] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:47:12.941 [http-nio-8080-exec-7] INFO  com.example.demo.rest.TagsController - Started get tag call.
+16:47:12.942 [http-nio-8080-exec-7] INFO  com.example.demo.rest.TagsController - Completed get tag call.
+16:47:12.942 [http-nio-8080-exec-7] INFO  com.example.demo.dao.PostDaoImpl - Completed add post by profile call.
+16:47:12.942 [http-nio-8080-exec-7] INFO  c.e.demo.service.UserServiceImpl - Service : Completed get user method
+16:47:12.943 [http-nio-8080-exec-7] INFO  c.example.demo.rest.UsersController - Controller : Completed get user call returning results for id = 4
+16:47:12.943 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:47:12.944 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [com.example.demo.dto.UserResponseDto@2e3625ab]
+16:47:12.944 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:47:12.954 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/likeimage.png", parameters={}
+16:47:12.954 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+16:47:12.956 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
