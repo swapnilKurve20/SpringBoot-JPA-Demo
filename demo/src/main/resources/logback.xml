@@ -19,7 +19,7 @@
             </Pattern>
         </layout>
     </appender> -->
-    
+   
     <appender name="FILE-AUDIT" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>debug.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
